@@ -1,0 +1,312 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.28)  22 JAN 2021 01:00
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**ASEAssignment.tex
+(./ASEAssignment.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14>
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk12.clo
+File: bk12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@chapter=\count168
+\c@section=\count169
+\c@subsection=\count170
+\c@subsubsection=\count171
+\c@paragraph=\count172
+\c@subparagraph=\count173
+\c@figure=\count174
+\c@table=\count175
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen135
+\Gin@req@width=\dimen136
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+)
+(/usr/share/texlive/texmf-dist/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip49
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen137
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen138
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count176
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count177
+\leftroot@=\count178
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count179
+\DOTSCASE@=\count180
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box45
+\strutbox@=\box46
+\big@size=\dimen139
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count181
+\c@MaxMatrixCols=\count182
+\dotsspace@=\muskip16
+\c@parentequation=\count183
+\dspbrk@lvl=\count184
+\tag@help=\toks18
+\row@=\count185
+\column@=\count186
+\maxfields@=\count187
+\andhelp@=\toks19
+\eqnshift@=\dimen140
+\alignsep@=\dimen141
+\tagshift@=\dimen142
+\tagwidth@=\dimen143
+\totwidth@=\dimen144
+\lineht@=\dimen145
+\@envbody=\toks20
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count188
+\lst@gtempboxa=\box47
+\lst@token=\toks22
+\lst@length=\count189
+\lst@currlwidth=\dimen146
+\lst@column=\count190
+\lst@pos=\count191
+\lst@lostspace=\dimen147
+\lst@width=\dimen148
+\lst@newlines=\count192
+\lst@lineno=\count193
+\lst@maxwidth=\dimen149
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
+\c@lstnumber=\count194
+\lst@skipnumbers=\count195
+\lst@framebox=\box48
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2019/09/10 1.8c listings configuration
+))
+Package: listings 2019/09/10 1.8c (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count196
+\l__pdf_internal_box=\box49
+)
+(./ASEAssignment.aux)
+\openout1 = `ASEAssignment.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count197
+\scratchdimen=\dimen150
+\scratchbox=\box50
+\nofMPsegments=\count198
+\nofMParguments=\count199
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count266
+\MPscratchDim=\dimen151
+\MPnumerator=\count267
+\makeMPintoPDFobject=\count268
+\everyMPtoPDFconversion=\toks24
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\c@lstlisting=\count269
+<images/NITDGP.png, id=1, 314.17375pt x 321.2pt>
+File: images/NITDGP.png Graphic file (type png)
+<use images/NITDGP.png>
+Package pdftex.def Info: images/NITDGP.png  used on input line 31.
+(pdftex.def)             Requested size: 113.81102pt x 116.35237pt.
+
+[1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/NITDGP.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 45--47
+
+ []
+
+[2] [3]
+<images/1a1.png, id=19, 415.5525pt x 707.64375pt>
+File: images/1a1.png Graphic file (type png)
+<use images/1a1.png>
+Package pdftex.def Info: images/1a1.png  used on input line 119.
+(pdftex.def)             Requested size: 234.89539pt x 400.0pt.
+ [4 <./images/1a1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
+
+ []
+
+[5] [6]
+<images/1a2.png, id=29, 451.6875pt x 761.84625pt>
+File: images/1a2.png Graphic file (type png)
+<use images/1a2.png>
+Package pdftex.def Info: images/1a2.png  used on input line 196.
+(pdftex.def)             Requested size: 237.15326pt x 400.0pt.
+ [7 <./images/1a2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 205--221
+
+ []
+
+<images/2a1.jpg, id=34, 844.95676pt x 587.796pt>
+File: images/2a1.jpg Graphic file (type jpg)
+<use images/2a1.jpg>
+Package pdftex.def Info: images/2a1.jpg  used on input line 222.
+(pdftex.def)             Requested size: 600.00085pt x 500.00565pt.
+[8] [9 <./images/2a1.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 231--246
+
+ []
+
+<images/2b1.jpg, id=44, 1339.0025pt x 949.5475pt>
+File: images/2b1.jpg Graphic file (type jpg)
+<use images/2b1.jpg>
+Package pdftex.def Info: images/2b1.jpg  used on input line 247.
+(pdftex.def)             Requested size: 600.01207pt x 499.99777pt.
+[10] [11 <./images/2b1.jpg>]
+<images/3a1.png, id=51, 905.3825pt x 523.9575pt>
+File: images/3a1.png Graphic file (type png)
+<use images/3a1.png>
+Package pdftex.def Info: images/3a1.png  used on input line 260.
+(pdftex.def)             Requested size: 599.99956pt x 450.01103pt.
+<images/3a2.png, id=52, 1107.13625pt x 959.585pt>
+File: images/3a2.png Graphic file (type png)
+<use images/3a2.png>
+Package pdftex.def Info: images/3a2.png  used on input line 266.
+(pdftex.def)             Requested size: 599.99014pt x 499.99738pt.
+ [12 <./images/3a1.png>]
+<images/3a3.png, id=57, 991.705pt x 502.87875pt>
+File: images/3a3.png Graphic file (type png)
+<use images/3a3.png>
+Package pdftex.def Info: images/3a3.png  used on input line 272.
+(pdftex.def)             Requested size: 600.00609pt x 500.00002pt.
+ [13 <./images/3a2.png>]
+<images/3a4.png, id=63, 1110.1475pt x 1180.41pt>
+File: images/3a4.png Graphic file (type png)
+<use images/3a4.png>
+Package pdftex.def Info: images/3a4.png  used on input line 278.
+(pdftex.def)             Requested size: 599.99585pt x 600.00186pt.
+
+[14 <./images/3a3.png>] [15 <./images/3a4.png>]
+<images/3b1.png, id=72, 1015.795pt x 473.77pt>
+File: images/3b1.png Graphic file (type png)
+<use images/3b1.png>
+Package pdftex.def Info: images/3b1.png  used on input line 287.
+(pdftex.def)             Requested size: 600.01135pt x 450.01389pt.
+<images/3b2.png, id=73, 1064.97874pt x 1130.2225pt>
+File: images/3b2.png Graphic file (type png)
+<use images/3b2.png>
+Package pdftex.def Info: images/3b2.png  used on input line 293.
+(pdftex.def)             Requested size: 600.00784pt x 499.98979pt.
+ [16 <./images/3b1.png>]
+<images/3b3.png, id=78, 1101.11375pt x 619.31375pt>
+File: images/3b3.png Graphic file (type png)
+<use images/3b3.png>
+Package pdftex.def Info: images/3b3.png  used on input line 299.
+(pdftex.def)             Requested size: 600.01952pt x 500.016pt.
+
+[17 <./images/3b2.png>]
+<images/3b4.png, id=83, 1397.22pt x 804.00375pt>
+File: images/3b4.png Graphic file (type png)
+<use images/3b4.png>
+Package pdftex.def Info: images/3b4.png  used on input line 305.
+(pdftex.def)             Requested size: 600.00407pt x 599.99567pt.
+ [18 <./images/3b3.png>] [19 <./images/3b4.png>]
+(./ASEAssignment.aux) ) 
+Here is how much of TeX's memory you used:
+ 3546 strings out of 481239
+ 47353 string characters out of 5920377
+ 300647 words of memory out of 5000000
+ 18808 multiletter control sequences out of 15000+600000
+ 538631 words of font info for 45 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 30i,6n,36p,872b,1517s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.
+enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf/fonts/type1/p
+ublic/cm-super/sfrm1200.pfb>
+Output written on ASEAssignment.pdf (19 pages, 808601 bytes).
+PDF statistics:
+ 118 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+
