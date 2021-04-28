@@ -1,0 +1,224 @@
+\documentclass[15pt]{article}
+\usepackage{graphicx,fullpage,blindtext,amsmath,amssymb,listings,pgfplots,pgfplotstable}
+\graphicspath{ {images/} }
+\usepackage[utf8]{inputenc}
+\usepackage[absolute]{textpos}
+\setlength{\TPHorizModule}{1cm}
+\setlength{\TPVertModule}{1cm}
+\pgfplotsset{compat=1.7}
+\usepackage{tikz}
+\title{\emph{2020-2021\\Game Theory and Its Applications\\CS 9042}}
+\author{
+Arghya Bandyopadhyay 20CS4103
+}
+\date{27th March 2021}
+\begin{document}
+\begin{textblock}{5}(14,1)
+\noindent\Large \[\frac{M.Tech./Even/2020-21}{\textbf{\emph{Assignment}}}\]
+\end{textblock}
+\maketitle
+\begin{enumerate}
+\item
+Find out Mixed-Nash equilibrium for Rock-Paper-Scissor game
+
+\textbf{\emph{Answer: }}
+This is another problem of algebra, only now each player has 3 strategies. Let $p1_{rock}$ be the probability that
+Player 1 plays Rock, $p1_{paper}$ be the probability that Player 1 plays Paper, and $p1_{scissors}$ be the probability
+that Player 1 plays Scissors. Let $p2_{rock}$, $p2_{paper}$, and $p2_{scissors}$ be the respective probabilities for Player 2.
+Player 1's goal is to make Player 2 indifferent among his pure strategies. We know that if Player 1 uses his
+mixed strategy and Player 2 ALWAYS chooses Rock, then Player 2 will receive 0 with probability $p1_{rock}$, 1
+with probability $p1_{paper}$, and 1 with probability $p1_{scissors}$. If Player 2 ALWAYS chooses Paper, then Player
+2 will receive 1 with probability $p1_{rock}$, 0 with probability $p1_{paper}$, and 1 with probability $p1_{scissors}$. If
+Player 2 ALWAYS chooses Scissors, then Player 2 will receive 1 with probability $p1_{rock}$, 1 with probability
+$p1_{paper}$, and 0 with probability p1scissors. We can say that the expected value for Player 2 of playing each
+of these strategies is then:
+
+\begin{equation} \label{eq1}
+\begin{split}
+\mathbb{E}_2[Rock] & = 0*p1_{rock}+(-1)*p1_{paper}+1*p1_{scissors}\\
+\mathbb{E}_2[Paper] & = 1*p1_{rock}+0*p1_{paper}+(-1)*p1_{scissors}\\
+\mathbb{E}_2[Scissors] & = (-1)*p1_{rock}+1*p1_{paper}+0*p1_{scissors}\\
+\end{split}
+\end{equation}
+
+We now have 3 unknowns - $p1_{rock}$, $p1_{paper}$, and $p1_{scissors}$. It must be that Player 2 has:
+
+\begin{equation} \label{eq2}
+\begin{split}
+\mathbb{E}_2[Rock] & =\mathbb{E}_2[Paper]\\
+\mathbb{E}_2[Paper] & =\mathbb{E}_2[Scissors]\\
+\end{split}
+\end{equation}
+
+By transitivity, this gives that E2 [Rock] = E2 [Scissors]. However, there are only 2 equations and 3
+unknowns. The third equation is that probabilities must sum to 1, so that our 3 equations are now:
+
+\begin{equation} \label{eq3}
+\begin{split}
+0*p1_{rock}+(-1)*p1_{paper}+1*p1_{scissors} 
+& =1*p1_{rock}+0*p1_{paper}+(-1)*p1_{scissors}\\
+1*p1_{rock}+0*p1_{paper}+(-1)*p1_{scissors}
+& =(-1)*p1_{rock}+1*p1_{paper}+0*p1_{scissors}\\
+p1_{rock}+p1_{paper}+p1_{scissors}&=1\\
+\end{split}
+\end{equation}
+
+We can now solve the 3 equations for $p1_{rock}$, $p1_{paper}$, and $p1_{scissors}$. Rewrite $p1_{scissors}$ = 1-$p1_{rock} - p1_{paper}$
+and substitute into the first two equations. We get:
+
+\begin{equation} \label{eq4}
+\begin{split}
+(-1)*p1_{paper}+1*(1-p1_{rock} - p1_{paper}) 
+& =1*p1_{rock}+(-1)*(1-p1_{rock} - p1_{paper})\\
+1*p1_{rock}+(-1)*(1-p1_{rock} - p1_{paper})
+& =(-1)*p1_{rock}+1*p1_{paper}\\
+\end{split}
+\end{equation}
+
+Now it is just a simple matter of solving the system.
+
+\begin{equation} \label{eq5}
+\begin{split}
+-p1_{paper}+1-p1_{rock} - p1_{paper} 
+& =p1_{rock}-1+p1_{rock} +p1_{paper}\\
+p1_{rock}-1+p1_{rock} +p1_{paper}
+& =-p1_{rock}+p1_{paper}\\
+\end{split}
+\end{equation}
+
+Simplifying:
+
+\begin{equation} \label{eq6}
+\begin{split}
+-3*p1_{paper}+2 
+& =3*p1_{rock}\\
+3*p1_{rock}-1&=0\\
+\end{split}
+\end{equation}
+
+We have $p1_{rock}= \frac{1}{3}$
+from the last equation. Substituting that into the first equation we get:
+
+\begin{equation} \label{eq7}
+\begin{split}
+-3*p1_{paper}+2 
+& =3*\frac{1}{3}\\
+\end{split}
+\end{equation}
+
+Solving for $p1_{paper}$ gives $p1_{paper}= \frac{1}{3}$. Now, using $p1_{scissors}$ = 1-$p1_{rock} - p1_{paper}$ we find that 
+
+\begin{equation} \label{eq8}
+\begin{split}
+p1_{scissors}
+& =\frac{1}{3}\\
+\end{split}
+\end{equation}
+
+
+So if Player 1 plays Rock $\frac{1}{3}$ of the time, Paper $\frac{1}{3}$ of the time, and Scissors $\frac{1}{3}$ of the time this will make Player 2 indifferent over his pure strategies. The expected value for Player 2 of playing Rock is 0, of playing Paper
+is 0, and of playing Scissors is 0. We can also check some mixed strategies for Player 2. If Player 2 plays Rock 50\% of the time and Paper 50\% of the time his expected value of playing that strategy is 0. If Player 2 plays Rock 50\% of the time, Paper 25\% of the time, and Scissors 25\% of the time his expected value is 0. This is what is required when finding a MSNE.
+
+Now, we have only found the probabilities for Player 1. We know that all strategies (pure or mixed) by Player 2 provide the same expected value when Player 1 chooses Rock, Paper, and Scissors $\frac{1}{3}$ of the time each. Can Player 2 then just choose any strategy? No, because not any strategy will make Player 1 indifferent over his strategies. We then have to and $p2_{rock}$, $p2_{paper}$, $p2_{scissors}$, using the same methodology that we just used to find $p1_{rock}$, , $p1_{paper}$, $p2_{scissors}$. Luckily, in the Rock, Paper, Scissors game the two players
+have symmetric payoffs and strategies, so that the probabilities for Player 2 that make Player 1 indifferent
+between his strategies are $p2_{rock}=\frac{1}{3}, p2_{paper}=\frac{1}{3}, p2_{scissors}=\frac{1}{3},$. The mixed strategy Nash equilibrium for this game (and the only Nash equilibrium of this game) is that Player 1 chooses Rock, Paper, and Scissors each with $\frac{1}{3}$ probability, and Player 2 chooses Rock, Paper, and Scissors each with $\frac{1}{3}$ probability. Note that the expected value for both players of playing this game is 0. 
+
+Now, suppose that Player 2 uses a different strategy, like $p2_{rock}=\frac{1}{3}, p2_{paper}=\frac{1}{2}, p2_{scissors}=\frac{1}{6},$.
+Should Player 1 respond with the exact same strategy? NO. If Player 1 uses the exact same strategy as
+Player 2 then his expected value of using that strategy is also 0. Player 1 can do BETTER than 0 if he uses
+a strategy like always choose Scissors. If Player 1 uses this strategy against $p2_{rock}=\frac{1}{3}, p2_{paper}=\frac{1}{2}, p2_{scissors}=\frac{1}{6},$.
+then Player 1 will have an expected value of $\frac{1}{6}$
+because he will earn (1) with $\frac{1}{3}$ probability
+(when Player 2 picks Rock), 1 with $\frac{1}{2}$ probability (when Player 2 picks Paper) and 0 with $\frac{1}{6}$ probability
+(when Player 2 chooses Scissors). Of course, if Player 1 always chooses Scissors then Player 2 would always choose Rock. But then Player 1 would always choose Paper. And the cycle would go on. The only time it stops is when $p1_{rock}=\frac{1}{3}, p1_{paper}=\frac{1}{3}, p1_{scissors}=\frac{1}{3}, p2_{rock}=\frac{1}{3}, p2_{paper}=\frac{1}{3}, p2_{scissors}=\frac{1}{3},$
+
+\item Devise one example which helps to establish that Ranked Choice Voting is not strategy proof. Manipulation should be done in a way that our preferred candidate gets more favoured match-ups in later round and alternatives should be eliminated early
+
+\textbf{\emph{Answer: }}According to the question, there is a site where there are very few people who upload whereas there are bulk of people who just enjoy downloading.\\
+
+As a result of which, cost of defect will increase as compared to cost of cooperation.\\
+In long term if this continues then the game might stop.\\
+Let us take a look at an individual person, he/she has two choices,
+\begin{enumerate}
+\item upload
+\item Dont upload
+\end{enumerate}
+
+What was the individual best response, it was don't upload that was the dominant strategy solution for the game i.e when the game is been played between users.
+So, a prisoner's dilemma situation is happening \& we can say that because of this, many people had a free ride(don't upload in this case)
+However, there are some people, who are uploading the files \& restore downloading the game is being played in a repeated manner.
+
+But in subsequent years the site will slowly approach towards extinction.\\
+
+
+\item Try to find any algorithm which will give both-side optimal result in stable matching problem. Find whether this is possible or not?
+
+\textbf{\emph{Answer: }}\\ \textbf{Ranked-Choice voting:-}
+\begin{enumerate}
+\item Voters submit a full ranked list
+\item If there is some alternatives a* that received more than 50\% of the first choice votes,
+then, a* is the winner
+\item Else, the alternative with the fewest first-choice votes is deleted \& the winner is computed recursively on the remaining alternatives.
+\end{enumerate}
+Ranked choice voting is not strategyproof. The intuition is that there can be an incentive to influence who gets eliminated early on, so that our preffered guy gets more favoured matchups in later rounds. Compared to the plurality rule, however it seems trickier for a voter to reason about how to game the system in ranked choice voiting. This is one of the reason why most voting to plurality voting.
+For example, even if we know everyone else's votes, the problem of checking for a profitable manipulation is NP Hard.\\
+
+\item 
+Is Indian election system using plurality voting rule?
+
+\textbf{\emph{Answer: }} Plurality voting is used for local and/or national elections in 43 of the 193 countries that are members of the United Nations. It is particularly prevalent in the United Kingdom, the United States, Canada and India.
+
+\item 
+Devise one scenario with a preference list in which one is incrementally improving under deferred acceptance algorithm(i.e. even if one is accepted at the time being and if later on a more preferred choice comes up He/She will be better off).
+
+\textbf{\emph{Answer: }}\\ \textbf{Nash Equilibrium:-}
+\begin{enumerate}
+\item It is a concept within game theory where the optimal outcome of a game is where there is no incentive to deviate from the initial strategy.
+\item More specifically, the Nash equilibrium is a concept of game theory, where no player has an incentive to deviate from their chosen strategy after considering an opponent's choice.
+\item \textbf{For Example:} If two players Alice \& Bob choose strategy A \& B, (A,B) is a Nash Equilibrium. If Alice has no other strategy available that does better than A, at maximizing her payoff in response to Bob choosing B and B has no other strategy available that does better than B at maximizing his payoff in response to Alice choosing A.
+\end{enumerate}
+\item Justify that the POA in the non-linear Pigou's example is unbounded as $P \to \infty$
+
+\textbf{\emph{Answer: }} The POA is $\frac{4}{3}$ in both Braess’s Paradox and Pigou’s example — not so bad for completely unregulated behavior. Given what we currently know, the coolest thing that could be true would be if the POA of selfish routing was always at most $\frac{4}{3}$. (A rather bold guess, given that we've only looked at two examples.) The story is not so rosy in all networks, however. In the nonlinear Pigou’s example (Figure 3(b)), we replace the previous cost function $c(x) = x$ of the lower edge with the function $c(x) = x^p$ , with p large. The lower edge remains a
+dominant strategy, and the equilibrium travel time remains 1. What’s changed is that the optimal solution is now much better. If we again split the traffic equally between the two links, then the average travel time tends to $\frac{1}{2}$ as $P \to \infty$ — traffic on the bottom edge gets to t nearly instantaneously. We can do even better by routing $(1\textendash\epsilon)$ traffic on the bottom
+link, where $\epsilon$ tends to 0 as p tends to infinity — almost all of the traffic gets to t with travel
+time $(1\textendash\epsilon)^p$ , which is close to 0 when p is sufficiently large, and the $\epsilon$ fraction of martyrs
+on the upper edge contribute little to the average travel time. We conclude that the POA in the nonlinear Pigou’s example is unbounded as $P \to \infty$.
+
+\item 
+How DU is the unique, best response for each player i.e unique best strategy, verify this claim.
+
+\textbf{\emph{Answer: }}\\ \textbf{Nash Equilibrium:-}
+\begin{enumerate}
+\item It is a concept within game theory where the optimal outcome of a game is where there is no incentive to deviate from the initial strategy.
+\item More specifically, the Nash equilibrium is a concept of game theory, where no player has an incentive to deviate from their chosen strategy after considering an opponent's choice.
+\item \textbf{For Example:} If two players Alice \& Bob choose strategy A \& B, (A,B) is a Nash Equilibrium. If Alice has no other strategy available that does better than A, at maximizing her payoff in response to Bob choosing B and B has no other strategy available that does better than B at maximizing his payoff in response to Alice choosing A.
+\end{enumerate}
+\item 
+Does proportionality implies envy-freeness Or vice-versa?
+
+\textbf{\emph{Answer: }}\\ 
+Proportionality (PR) and envy-freeness (EF) are two independent properties, but in some cases one of them may imply the other.
+
+When all valuations are additive set functions and the entire cake is divided, the following implications hold:
+\begin{enumerate}
+\item With two partners, PR and EF are equivalent;
+\item With three or more partners, EF implies PR but not vice versa. For example, it is possible that each of three partners receives $\frac{1}{3}$ in his subjective opinion, but in Alice's opinion, Bob's share is worth $\frac{2}{3}$.
+
+When the valuations are only sub additive, EF still implies PR, but PR no longer implies EF even with two partners: it is possible that Alice's share is worth $\frac{1}{2}$ in her eyes, but Bob's share is worth even more. On the contrary, when the valuations are only super additive, PR still implies EF with two partners, but EF no longer implies PR even with two partners: it is possible that Alice's share is worth $\frac{1}{4}$ in her eyes, but Bob's is worth even less. Similarly, when not all cake is divided, EF no longer implies PR. The implications are summarized in the following table:
+\begin{center}
+\begin{tabular}{ |c|c|c| } 
+ \hline
+ Additive & \begin{tabular}{@{}c@{}}$EF \to PR$ \\ $PR \to EF$\end{tabular} & $EF \to PR$  \\ [0.5ex] 
+ \hline
+ Subadditive & $EF \to PR$ & $EF \to PR$ \\ 
+ \hline
+ Superadditive & $PR \to EF$ & - \\ 
+ \hline
+ General & - & - \\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\end{enumerate}
+\end{enumerate}
+\end{document}
