@@ -134,49 +134,206 @@ because he will earn (1) with $\frac{1}{3}$ probability
 
 \item Devise one example which helps to establish that Ranked Choice Voting is not strategy proof. Manipulation should be done in a way that our preferred candidate gets more favoured match-ups in later round and alternatives should be eliminated early
 
-\textbf{\emph{Answer: }}According to the question, there is a site where there are very few people who upload whereas there are bulk of people who just enjoy downloading.\\
+\textbf{\emph{Answer: }}True Preference Result:
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ \multicolumn{4}{|c|}{Iteration 1} \\ 
+ \hline
+ Choice & Voter 1 2 & Voter 3 4 & Voter 5  \\ [0.5ex] 
+ \hline
+ $1^{st}$ & a & b & c \\ 
+ \hline
+ $2^{nd}$ & d & a & d \\ 
+ \hline
+ $3^{rd}$ & c & d & b \\ 
+ \hline
+ $4^{th}$ & b & c & a \\
+ \hline
+ \multicolumn{4}{|c|}{Iteration 2} \\ 
+ \hline
+ Choice & Voter 1 2 & Voter 3 4 & Voter 5  \\ [0.5ex] 
+ \hline
+ $1^{st}$ & a & b & c \\ 
+ \hline
+ $2^{nd}$ & c & a & b \\ 
+ \hline
+ $3^{rd}$ & b & c & a \\
+ \hline
+ \multicolumn{4}{|c|}{Iteration 3} \\ 
+ \hline
+ Choice & Voter 1 2 & Voter 3 4 & Voter 5  \\ [0.5ex] 
+ \hline
+ $1^{st}$ & a & b & b \\ 
+ \hline
+ $2^{nd}$ & b & a & a \\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+Here B wins.
 
-As a result of which, cost of defect will increase as compared to cost of cooperation.\\
-In long term if this continues then the game might stop.\\
-Let us take a look at an individual person, he/she has two choices,
-\begin{enumerate}
-\item upload
-\item Dont upload
-\end{enumerate}
-
-What was the individual best response, it was don't upload that was the dominant strategy solution for the game i.e when the game is been played between users.
-So, a prisoner's dilemma situation is happening \& we can say that because of this, many people had a free ride(don't upload in this case)
-However, there are some people, who are uploading the files \& restore downloading the game is being played in a repeated manner.
-
-But in subsequent years the site will slowly approach towards extinction.\\
-
+Results after manipulation (When voter 1 and voter 2 switch to their $2^{nd}$ favourite choice):
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ \multicolumn{4}{|c|}{Iteration 1} \\ 
+ \hline
+ Choice & Voter 1 2 & Voter 3 4 & Voter 5  \\ [0.5ex] 
+ \hline
+ $1^{st}$ & d & b & c \\ 
+ \hline
+ $2^{nd}$ & a & a & d \\ 
+ \hline
+ $3^{rd}$ & c & d & b \\ 
+ \hline
+ $4^{th}$ & b & c & a \\
+ \hline
+ \multicolumn{4}{|c|}{Iteration 2} \\ 
+ \hline
+ Choice & Voter 1 2 & Voter 3 4 & Voter 5  \\ [0.5ex] 
+ \hline
+ $1^{st}$ & d & b & c \\ 
+ \hline
+ $2^{nd}$ & c & d & d \\ 
+ \hline
+ $3^{rd}$ & b & c & b \\
+ \hline
+ \multicolumn{4}{|c|}{Iteration 3} \\ 
+ \hline
+ Choice & Voter 1 2 & Voter 3 4 & Voter 5  \\ [0.5ex] 
+ \hline
+ $1^{st}$ & d & b & d \\ 
+ \hline
+ $2^{nd}$ & b & d & b \\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+Here D wins.
 
 \item Try to find any algorithm which will give both-side optimal result in stable matching problem. Find whether this is possible or not?
 
-\textbf{\emph{Answer: }}\\ \textbf{Ranked-Choice voting:-}
-\begin{enumerate}
-\item Voters submit a full ranked list
-\item If there is some alternatives a* that received more than 50\% of the first choice votes,
-then, a* is the winner
-\item Else, the alternative with the fewest first-choice votes is deleted \& the winner is computed recursively on the remaining alternatives.
-\end{enumerate}
-Ranked choice voting is not strategyproof. The intuition is that there can be an incentive to influence who gets eliminated early on, so that our preffered guy gets more favoured matchups in later rounds. Compared to the plurality rule, however it seems trickier for a voter to reason about how to game the system in ranked choice voiting. This is one of the reason why most voting to plurality voting.
-For example, even if we know everyone else's votes, the problem of checking for a profitable manipulation is NP Hard.\\
+\textbf{\emph{Answer: }} Suppose a situation :
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ \multicolumn{4}{|c|}{Preference List} \\ 
+ \hline
+ Boy & Boy's Preferences & Girl & Girl's Preferences  \\ [0.5ex] 
+ \hline
+ $B_1$ & $G_2>G_1$ & $G_1$ & $B_1>B_2$ \\ 
+ \hline
+ $B_2$ & $G_1>G_2$ & $G_2$ & $B_2>B_1$ \\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+
+Two possible stable solution are:
+Solution 1, gives priority to boys and Solution 2, gives priority to girls.
+
+\begin{center}
+\begin{tabular}{ |c|c| } 
+ \hline
+ \multicolumn{2}{|c|}{Solution 1} \\ 
+ \hline
+ Boy & Girl  \\ [0.5ex] 
+ \hline
+ $B_1$ & $G_2$ \\ 
+ \hline
+ $B_2$ & $G_1$ \\ [1ex] 
+ \hline
+\end{tabular}
+\begin{tabular}{ |c|c| } 
+ \hline
+ \multicolumn{2}{|c|}{Solution 2} \\ 
+ \hline
+ Boy & Girl  \\ [0.5ex] 
+ \hline
+ $B_1$ & $G_1$ \\ 
+ \hline
+ $B_2$ & $G_2$\\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+
+No, matter what there was no instance to be found which provide optimal solution to both side because they are acting as contrary to one another.
+
+\textbf{So devising Algorithm is not possible till now.}
 
 \item 
 Is Indian election system using plurality voting rule?
 
-\textbf{\emph{Answer: }} Plurality voting is used for local and/or national elections in 43 of the 193 countries that are members of the United Nations. It is particularly prevalent in the United Kingdom, the United States, Canada and India.
+\textbf{\emph{Answer: }} Since, in order to win one need votes more than any other single candidate, majority vote is not required, \textbf{Yes}, India’s election System follows plurality voting rule. Plurality voting is used for local and/or national elections in 43 of the 193 countries that are members of the United Nations. It is particularly prevalent in the United Kingdom, the United States, Canada and India. 
 
 \item 
 Devise one scenario with a preference list in which one is incrementally improving under deferred acceptance algorithm(i.e. even if one is accepted at the time being and if later on a more preferred choice comes up He/She will be better off).
 
-\textbf{\emph{Answer: }}\\ \textbf{Nash Equilibrium:-}
-\begin{enumerate}
-\item It is a concept within game theory where the optimal outcome of a game is where there is no incentive to deviate from the initial strategy.
-\item More specifically, the Nash equilibrium is a concept of game theory, where no player has an incentive to deviate from their chosen strategy after considering an opponent's choice.
-\item \textbf{For Example:} If two players Alice \& Bob choose strategy A \& B, (A,B) is a Nash Equilibrium. If Alice has no other strategy available that does better than A, at maximizing her payoff in response to Bob choosing B and B has no other strategy available that does better than B at maximizing his payoff in response to Alice choosing A.
-\end{enumerate}
+\textbf{\emph{Answer: }}
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c|c| } 
+ \hline
+ \multicolumn{5}{|c|}{Preference List} \\ 
+ \hline
+ Student & Student's Preferences & Hospital & Capacity & Hospital's Preferences  \\ [0.5ex] 
+ \hline
+ $A$ & $H_1 H_2 H_3$ & $H_1$ & 2 & $C A B D$ \\ 
+ \hline
+ $B$ & $H_1 H_2 H_3$ & $H_2$ & 1 & $D A B C$ \\ 
+ \hline
+ $C$ & $H_2 H_1 H_3$ & $H_3$ & 1 & $A B C D$ \\ 
+ \hline
+ $D$ & $H_2 H_1 H_3$ &  & & \\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+
+Allotment to the student will be done accordingly:
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ \multicolumn{4}{|c|}{Iteration 1 allotment list} \\ 
+ \hline
+ Student & Hospital Allotted & Hospital & Student Allotted \\ [0.5ex] 
+ \hline
+ $A$ & $H_1$ & $H_1$ & $A B$ \\ 
+ \hline
+ $B$ & $H_1$ & $H_2$ & $D$ \\ 
+ \hline
+ $C$ & & $H_3$ & \\ 
+ \hline
+ $D$ & $H_2$ &  & \\ [1ex] 
+ \hline
+ \hline
+ \multicolumn{4}{|c|}{Iteration 2 allotment list} \\ 
+ \hline
+ Student & Hospital Allotted & Hospital & Student Allotted \\ [0.5ex] 
+ \hline
+ $A$ & & $H_1$ & $B  C$ \\ 
+ \hline
+ $B$ & $H_1$ & $H_2$ & $D$ \\ 
+ \hline
+ $C$ & $H_1$ & $H_3$ & \\ 
+ \hline
+ $D$ & $H_2$ &  & \\ 
+ \hline
+ \hline
+ \multicolumn{4}{|c|}{Iteration 3 allotment list} \\ 
+ \hline
+ Student & Hospital Allotted & Hospital & Student Allotted \\ [0.5ex] 
+ \hline
+ $A$ & $H_3$ & $H_1$ & $B C$ \\ 
+ \hline
+ $B$ & $H_1$ & $H_2$ & $D$ \\ 
+ \hline
+ $C$ & $H_1$ & $H_3$ & $A$\\ 
+ \hline
+ $D$ & $H_2$ &  & \\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+
 \item Justify that the POA in the non-linear Pigou's example is unbounded as $P \to \infty$
 
 \textbf{\emph{Answer: }} The POA is $\frac{4}{3}$ in both Braess’s Paradox and Pigou’s example — not so bad for completely unregulated behavior. Given what we currently know, the coolest thing that could be true would be if the POA of selfish routing was always at most $\frac{4}{3}$. (A rather bold guess, given that we've only looked at two examples.) The story is not so rosy in all networks, however. In the nonlinear Pigou’s example (Figure 3(b)), we replace the previous cost function $c(x) = x$ of the lower edge with the function $c(x) = x^p$ , with p large. The lower edge remains a
@@ -188,12 +345,23 @@ on the upper edge contribute little to the average travel time. We conclude that
 \item 
 How DU is the unique, best response for each player i.e unique best strategy, verify this claim.
 
-\textbf{\emph{Answer: }}\\ \textbf{Nash Equilibrium:-}
-\begin{enumerate}
-\item It is a concept within game theory where the optimal outcome of a game is where there is no incentive to deviate from the initial strategy.
-\item More specifically, the Nash equilibrium is a concept of game theory, where no player has an incentive to deviate from their chosen strategy after considering an opponent's choice.
-\item \textbf{For Example:} If two players Alice \& Bob choose strategy A \& B, (A,B) is a Nash Equilibrium. If Alice has no other strategy available that does better than A, at maximizing her payoff in response to Bob choosing B and B has no other strategy available that does better than B at maximizing his payoff in response to Alice choosing A.
-\end{enumerate}
+\textbf{\emph{Answer: }}
+Payoff matrix is:
+
+\begin{center}
+\begin{tabular}{ |c|c|c| }
+ \hline
+ & $U$ & $DU$  \\ [0.5ex] 
+ \hline
+ $U$ & $(2,2)$ & $(-1,3)$ \\ 
+ \hline
+ $DU$ & $(3,3)$ & $(0,0)$\\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+
+By analyzing the above payoff matrix, it was found that $(DU, DU )$ is a \emph{Stable Solution}. Because, in other three cases if any one player's deviates from $U \to DU$ can improve his/her playoff i.e $(DU, DU )$ is a Nash Equilibrium. So this proves the fact of stability. $(DU, DU )$ is also the unique best strategy no matter what the other player is doing as players are always inclined to maximising their payoff. Even if they agree for $(U, U )$, deviation by other players can bring loss. Hence proved.
+
 \item 
 Does proportionality implies envy-freeness Or vice-versa?
 
@@ -211,9 +379,9 @@ When the valuations are only sub additive, EF still implies PR, but PR no longer
  \hline
  Additive & \begin{tabular}{@{}c@{}}$EF \to PR$ \\ $PR \to EF$\end{tabular} & $EF \to PR$  \\ [0.5ex] 
  \hline
- Subadditive & $EF \to PR$ & $EF \to PR$ \\ 
+ Sub additive & $EF \to PR$ & $EF \to PR$ \\ 
  \hline
- Superadditive & $PR \to EF$ & - \\ 
+ Super additive & $PR \to EF$ & - \\ 
  \hline
  General & - & - \\ [1ex] 
  \hline
