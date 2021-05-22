@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.28)  22 MAY 2021 17:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.28)  22 MAY 2021 18:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -282,51 +282,62 @@ File: images/Page5.jpeg Graphic file (type jpg)
 Package pdftex.def Info: images/Page5.jpeg  used on input line 42.
 (pdftex.def)             Requested size: 794.97983pt x 614.30527pt.
  [3 <./images/Page2.jpeg>] [4 <./images/Page3.jpeg>]
-[5 <./images/Page4.jpeg>] [6 <./images/Page5.jpeg>] [7]
-<images/Plot1.png, id=36, 462.528pt x 346.896pt>
+[5 <./images/Page4.jpeg>] [6 <./images/Page5.jpeg>] [7] [8]
+<images/Plot1.png, id=39, 462.528pt x 346.896pt>
 File: images/Plot1.png Graphic file (type png)
 <use images/Plot1.png>
-Package pdftex.def Info: images/Plot1.png  used on input line 127.
+Package pdftex.def Info: images/Plot1.png  used on input line 128.
 (pdftex.def)             Requested size: 533.36398pt x 400.0pt.
-<images/Page6.jpeg, id=37, 1284.8pt x 963.6pt>
+<images/Output1.png, id=40, 613.29124pt x 212.795pt>
+File: images/Output1.png Graphic file (type png)
+<use images/Output1.png>
+Package pdftex.def Info: images/Output1.png  used on input line 131.
+(pdftex.def)             Requested size: 614.295pt x 213.15488pt.
+<images/Page6.jpeg, id=41, 1284.8pt x 963.6pt>
 File: images/Page6.jpeg Graphic file (type jpg)
 <use images/Page6.jpeg>
-Package pdftex.def Info: images/Page6.jpeg  used on input line 129.
+Package pdftex.def Info: images/Page6.jpeg  used on input line 133.
 (pdftex.def)             Requested size: 794.97983pt x 614.30527pt.
-<images/Page7.jpeg, id=38, 1284.8pt x 963.6pt>
+<images/Page7.jpeg, id=42, 1284.8pt x 963.6pt>
 File: images/Page7.jpeg Graphic file (type jpg)
 <use images/Page7.jpeg>
-Package pdftex.def Info: images/Page7.jpeg  used on input line 130.
+Package pdftex.def Info: images/Page7.jpeg  used on input line 134.
 (pdftex.def)             Requested size: 794.97983pt x 614.30527pt.
-<images/Page8.jpeg, id=39, 1284.8pt x 963.6pt>
+<images/Page8.jpeg, id=43, 1284.8pt x 963.6pt>
 File: images/Page8.jpeg Graphic file (type jpg)
 <use images/Page8.jpeg>
-Package pdftex.def Info: images/Page8.jpeg  used on input line 131.
+Package pdftex.def Info: images/Page8.jpeg  used on input line 135.
 (pdftex.def)             Requested size: 794.97983pt x 614.30527pt.
- [8 <./images/Plot1.png>] [9 <./images/Page6.jpeg>] [10 <./images/Page7.jpeg>] 
-[11 <./images/Page8.jpeg>] [12]
-<images/Plot2.png, id=56, 462.528pt x 346.896pt>
+ [9 <./images/Plot1.png> <./images/Output1.png>] [10 <./images/Page6.jpeg>] [11
+ <./images/Page7.jpeg>] [12 <./images/Page8.jpeg>] [13] [14]
+<images/Plot2.png, id=65, 462.528pt x 346.896pt>
 File: images/Plot2.png Graphic file (type png)
 <use images/Plot2.png>
-Package pdftex.def Info: images/Plot2.png  used on input line 213.
+Package pdftex.def Info: images/Plot2.png  used on input line 218.
 (pdftex.def)             Requested size: 533.36398pt x 400.0pt.
- [13 <./images/Plot2.png>] (./Assignment1.aux) ) 
+<images/Output2.png, id=66, 538.01pt x 209.78375pt>
+File: images/Output2.png Graphic file (type png)
+<use images/Output2.png>
+Package pdftex.def Info: images/Output2.png  used on input line 221.
+(pdftex.def)             Requested size: 614.295pt x 239.53046pt.
+ [15 <./images/Plot2.png> <./images/Output2.png>] (./Assignment1.aux) ) 
 Here is how much of TeX's memory you used:
- 4038 strings out of 481239
- 54570 string characters out of 5920377
+ 4052 strings out of 481239
+ 54818 string characters out of 5920377
  325847 words of memory out of 5000000
- 19300 multiletter control sequences out of 15000+600000
+ 19314 multiletter control sequences out of 15000+600000
  533587 words of font info for 28 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,6n,36p,228b,1515s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvi
-ps/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Assignment1.pdf (13 pages, 2735043 bytes).
+ 30i,6n,36p,228b,1513s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/sh
+are/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf/fonts/type1/public/cm-
+super/sfrm1200.pfb>
+Output written on Assignment1.pdf (15 pages, 2755787 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
+ 85 PDF objects out of 1000 (max. 8388607)
+ 46 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
