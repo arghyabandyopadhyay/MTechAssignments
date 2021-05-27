@@ -5,29 +5,28 @@
 \graphicspath{ {images/} }
 \usepackage{listings}
 \date{28nd May 2021}
+\author{\Large submitted by\\ Arghya Bandyopadhyay\\
+    	RollNo. 20CS4103\\}
 \title{\begin{center}
        \bfseries\Large
     	Assignment 1\\
     	Of\\
-    	Network \& Distributed System Lab (CS1052)\\
+    	Network \& Distributed System Lab (CS2051)\\
         \vskip1cm
         Masters of Technology in Computer Science And Engineering\\
-        \vskip1cm
-        submitted by\\
-    	Arghya Bandyopadhyay\\
-    	RollNo. 20CS4103\\
     	\vskip1cm
     	submitted to\\
     	Dr Sujoy Saha\\
     	Assistant Professor\\
     	Dept. of CSE\\
+    	\vskip1cm
     	\includegraphics[width=4cm]{NITDGP}\\
     	National Institute of Technology, Durgapur\\
     \end{center}}
 \date{27th March 2021}
 \begin{document}
 \maketitle
-
+\pagebreak
 \begin{enumerate}
 \item Write simple TCP and UDP program using socket API which will transfer simple text
 messages, and check TCP and UDP packets using Wireshark.
@@ -110,7 +109,6 @@ int main()
 return 0;
 }
 \end{lstlisting}
-\pagebreak
 
 The following code is the implementation for \textbf{TCP Server side programming}.
 \begin{lstlisting}
@@ -210,9 +208,11 @@ int main()
       close(sock);
       return 0;
 } 
-
-	
 \end{lstlisting}
+
+\includegraphics[width=700pt]{Question11}
+
+\includegraphics[width=700pt]{Question12}
 \pagebreak
 
 The following code is the implementation for \textbf{UDP Client side programming}.
@@ -270,7 +270,6 @@ if ((sock = socket(AF_INET, SOCK_DGRAM, 0)) == -1)
 }
 
 \end{lstlisting}
-\pagebreak
 
 The following code is the implementation for \textbf{UDP Server side programming}.
 \begin{lstlisting}
@@ -337,45 +336,132 @@ int main()
 }
 
 \end{lstlisting}
+
+\includegraphics[width=700pt]{Question13}
+
+\includegraphics[width=700pt]{Question14}
+
 \pagebreak
 \item Using wireshark, capture the TCP headers while connecting your computer to the
 server of nit.dgp.ac.in.
 \begin{flushleft}
+\textbf{Answer.}
+
 \includegraphics[width=700pt]{Question21}
 \includegraphics[width=700pt]{Question22}
 \includegraphics[width=700pt]{Question23}
 \includegraphics[width=700pt]{Question24}
-\includegraphics[width=700pt]{Question25}
 \end{flushleft}
+\pagebreak
 \item \begin{enumerate}
 \item Show how the six flags (SYN, ACK, PUSH, URGENT, RST, FIN) are working in TCP protocol
+
+\textbf{Answer.}
+
 \item What is the IP address of nitdgp.ac.in? On what port number is it sending and receiving
 TCP segments for this connection?
 
-The IP address of nitdgp.ac.in is \textbf{14.139.221.29} and the tcp port number for sending and receiving TCP segments for the connections are \textbf{39424} and \textbf{443} respectively.
+\textbf{Answer.} The IP address of nitdgp.ac.in is \textbf{14.139.221.29} and the tcp port number for sending and receiving TCP segments for the connections are \textbf{443} respectively.
+
 \item Write a small socket program for the URGENT pointer and urgent flag?
+
+\textbf{Answer.}
+
+\begin{lstlisting}
+
+/* tcpclient01.c */ 
+
+sockfd = Tcp_connect(argv[1], argv[2]);
+write(sockfd, "123",3);
+printf("write 3	bytes from nornal data\n");
+sleep(1);
+send(sockfd, "4", 1, MSG_OOB);
+printf("write 1	bytes from OOB data\n");
+sleep(1);
+write(sockfd, "56",2);
+printf("write 2 bytes from nornal data\n");
+sleep(1);
+send(sockfd, "7", 1, MSG_OOB);
+printf("write 1 bytes from OOB data\n");
+sleep(1);
+write(sockfd, "89",2);
+printf("write 2 bytes from nornal data\n");
+sleep(1);
+
+\end{lstlisting}
+
+\begin{lstlisting}
+
+/* tcpserver01.c */ 
+
+#include "unp.h"
+int listenfd, confd;
+void sig_urg(int	signo)
+{
+	char buf[100];
+	int	n;
+	printf("SIGURG received \n");
+	n = recv(confd, buf, sizeof(buf)-1, MSG_OOB);
+	buf[n] = 0;
+	fprintf(stdout, "read %d OOB bytes :%s\n", n, buf);
+}
+int	main(int argc, char	**argv)
+{
+	int	n;
+	char buf[100];
+	if(argc	== 2) listenfd = Tcp_listen(NULL, argv[1], NULL);
+	else if(argc == 3) listenfd = Tcp_listen(argv[1], argv[2], NULL);
+	else fprintf(stderr, " usage: tcpserver [ <host> ] <port#>\n");
+	
+	confd = Accept(listenfd,  NULL, NULL);
+	Signal(SIGURG, sig_urg);
+	Fcntl(confd, F_SETOWN, getpid());
+	for(;;)
+	{
+		if((n = read(confd, buf, 100 - 1)) == 0)
+		{
+			printf("recv finished\n");
+			exit(0);
+		}
+		buf[n] = 0;
+		fprintf(stdout, "read %d bytes : %s\n", n, buf);
+	}
+	exit(0);
+}
+
+\end{lstlisting}
+
 \item What is the sequence number of the TCP SYN segment that is used to initiate the TCP
 connection between the client computer and nitdgp.ac.in?
+
+\textbf{Answer.} Relative sequence number is 0. And actual sequence number is \textbf{3520860541}. The sequence number	of the TCP SYN segment is 0	since it is used to initate	the	TCP	connection between the client computer and	nitdgp.ac.in.	
+
+\includegraphics[width=700pt]{Question3D}
+
 \item What is it in the segment that identifies the segment as a SYN segment?
+
+\textbf{Answer.} In the above figure,It is indicated by the Syn flag in the Flags section, which is set to 1.
+
 \item What is the sequence number of the SYN-ACK segment sent by nitdgp.ac.in to the client
 computer in reply to the SYN?
+
+\textbf{Answer.} Relative sequence number is 0. And actual sequence number is \textbf{1598426480}. The sequence number	of the TCP SYN segment is 0	since it is used to initate	the	TCP	connection between the client computer and	nitdgp.ac.in.
+
+\includegraphics[width=700pt]{Question3F}
+
 \item What is the value of the Acknowledgement field in the SYN-ACK segment?
+
+\textbf{Answer.} According to the above figure, the value of the acknowledgement field in the SYNACK segment is 1.
+
 \item How did nitdgp.ac.in determine that value?
+
+\textbf{Answer.} According to the above figure, the value of the ACK acknowledgement field in the SYNACK segment is determined by the server nitdgp.ac.in. The server adds 1 to the initial sequence number of SYN segment from teh client computer. For this case, the initial sequence number of SYN segment from the client computer is 0, thus the value of the ACK acknowledgement field in the SYNACK segment is 1.
+
 \item What is it in the segment that identifies the segment as a SYN-ACK segment?
+
+\textbf{Answer.} A segment will be identified as a SYNACK segment if both SYN flag and Acknowledgement in the segment are set to 1.
+
 \end{enumerate}
 \end{enumerate}
 
-\begin{center}
-\includegraphics[height=400pt]{Plot1}
-\end{center}
-\begin{flushleft}
-\includegraphics[width=\paperwidth]{Output1}
-\end{flushleft}
-\includegraphics[width=\paperheight, height=\paperwidth, angle=90]{Page6}
-\includegraphics[width=\paperheight, height=\paperwidth, angle=90]{Page7}
-\includegraphics[width=\paperheight, height=\paperwidth, angle=90]{Page8}
-
-\begin{flushleft}
-\includegraphics[width=\paperwidth]{Output2}
-\end{flushleft}
 \end{document}
