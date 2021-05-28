@@ -358,17 +358,63 @@ server of nit.dgp.ac.in.
 
 \textbf{Answer.}
 
+SYN – For connection establishment
+The synchronization flag is used as a first step in establishing a three-way handshake between two
+hosts. Only the first packet from both the sender and receiver should have this flag set.
+
+\includegraphics[width=700pt]{Question3A1}
+\pagebreak
+
+ACK – indicates that the acknowledgement number is valid
+The acknowledgment flag is used to acknowledge the successful receipt of a packet.
+the receiver sends an ACK as well as a SYN in the second step of the three way handshake process
+to tell the sender that it received its initial packet.
+
+\includegraphics[width=700pt]{Question3A2}
+\pagebreak
+
+FIN – for termination of connection (I have no more data to send)
+The finished flag means there is no more data from the sender. Therefore, it is used in the last
+packet sent from the sender.
+
+\includegraphics[width=700pt]{Question3A3}
+\pagebreak
+
+PSH – do not buffer – push the packet to the application
+The push flag is somewhat similar to the URG flag and tells the receiver to process these packets
+as they are received instead of buffering them.
+
+\includegraphics[width=700pt]{Question3A4}
+\pagebreak
+
+URG – urgent byte in packet at location indicated in the “urgent” field
+The urgent flag is used to notify the receiver to process the urgent packets before processing all
+other packets. The receiver will be notified when all known urgent data has been received.
+
+\includegraphics[width=700pt]{Question3A5}
+\pagebreak
+
+RST – rejection of TCP packet (denoted red in wireshark)
+The reset flag gets sent from the receiver to the sender when a packet is sent to a
+particular host that was not expecting it.
+
+\includegraphics[width=700pt]{Question3A6}
+\pagebreak
+
 \item What is the IP address of nitdgp.ac.in? On what port number is it sending and receiving
 TCP segments for this connection?
 
 \textbf{Answer.} The IP address of nitdgp.ac.in is \textbf{14.139.221.29} and the tcp port number for sending and receiving TCP segments for the connections are \textbf{443} respectively.
 
+\includegraphics[width=700pt]{Question3B}
+
 \item Write a small socket program for the URGENT pointer and urgent flag?
 
 \textbf{Answer.}
 
-\begin{lstlisting}
+The following code is the header file for \textbf{Binding server and connection of clients}.
 
+\begin{lstlisting}
 /* bindacpt.h */ 
 
 #include <stdio.h>
@@ -607,7 +653,10 @@ int Connect(char *addr) {
      return s;   /* Connected socket */
  }
 
+
 \end{lstlisting}
+
+The following code is the implementation for \textbf{TCP client side programming}.
 
 \begin{lstlisting}
 
@@ -678,6 +727,8 @@ static void iband(int s,char *str) {
   }
 
 \end{lstlisting}
+
+The following code is the implementation for \textbf{TCP Server side programming}.
 
 \begin{lstlisting}
 
