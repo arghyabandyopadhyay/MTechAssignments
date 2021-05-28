@@ -369,24 +369,313 @@ TCP segments for this connection?
 
 \begin{lstlisting}
 
+/* bindacpt.h */ 
+
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <string.h>
+#include <signal.h>
+#include <fcntl.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <netdb.h>
+#include <ctype.h>
+
+int confd;
+int mkaddr(void *addr,  
+		int *addrlen,  
+		char *str_addr,  
+		char *protocol) {  
+
+	char *inp_addr = strdup(str_addr);  
+	char *host_part = strtok(inp_addr, ":" );  
+	char *port_part = strtok(NULL, "\n" );  
+	struct sockaddr_in *ap =  
+		(struct sockaddr_in *) addr;  
+	struct hostent *hp = NULL;  
+	struct servent *sp = NULL;  
+	char *cp;  
+	long lv;  
+
+	/* 
+	 * Set input defaults: 
+	 */  
+	if ( !host_part ) {  
+		host_part =  "*" ;  
+	}  
+	if ( !port_part ) {  
+		port_part =  "*" ;  
+	}  
+	if ( !protocol ) {  
+		protocol =  "tcp" ;  
+	}  
+
+	/* 
+	 * Initialize the address structure: 
+	 */  
+	memset(ap,0,*addrlen);  
+	ap->sin_family = AF_INET;  
+	ap->sin_port = 0;  
+	ap->sin_addr.s_addr = INADDR_ANY;  
+
+	/* 
+	 * Fill in the host address: 
+	 */  
+	if ( strcmp(host_part, "*" ) == 0 ) {  
+		; /* Leave as INADDR_ANY */  
+	}  
+	else if ( isdigit(*host_part) ) {  
+		/* 
+		 * Numeric IP address: 
+		 */  
+		ap->sin_addr.s_addr =  
+			inet_addr(host_part);  
+		// if ( ap->sin_addr.s_addr == INADDR_NONE ) {  
+		if ( !inet_aton(host_part,&ap->sin_addr) ) {  
+			return -1;  
+		}  
+	}   
+		else {  
+			/* 
+			 * Assume a hostname: 
+			 */  
+			hp = gethostbyname(host_part);  
+			if ( !hp ) {  
+				return -1;  
+			}  
+			if ( hp->h_addrtype != AF_INET ) {  
+				return -1;  
+			}  
+			ap->sin_addr = * (struct in_addr *)  
+				hp->h_addr_list[0];  
+		}  
+
+		/* 
+		 * Process an optional port #: 
+		 */  
+		if ( !strcmp(port_part, "*" ) ) {  
+			/* Leave as wild (zero) */  
+		}  
+		else if ( isdigit(*port_part) ) {  
+			/* 
+			 * Process numeric port #: 
+			 */  
+			lv = strtol(port_part,&cp,10);  
+			if ( cp != NULL && *cp ) {  
+				return -2;  
+			}  
+			if ( lv < 0L || lv >= 32768 ) {  
+				return -2;  
+			}  
+			ap->sin_port = htons( (short)lv);  
+		}   
+		else {  
+			/* 
+			 * Lookup the service: 
+			 */  
+			sp = getservbyname( port_part, protocol);  
+			if ( !sp ) {  
+				return -2;  
+			}  
+			ap->sin_port = (short) sp->s_port;  
+		}  
+
+		/*  
+		 * Return address length  
+		 */  
+		*addrlen = sizeof *ap;  
+
+		free(inp_addr);  
+		return 0;  
+	}  
+
+void sigurg(int signo)
+{
+	char buf[256];
+	int	n;
+	printf("SIGURG received \n");
+	n = recv(confd, buf, sizeof(buf)-1, MSG_OOB);
+	buf[n] = 0;
+	fprintf(stdout, "read %d OOB bytes :%s\n", n, buf);
+}
+
+void  bail(const char *on_what) {
+      if ( errno != 0 ) {
+          fputs(strerror(errno),stderr);
+          fputs(": ",stderr);
+      }
+      fputs(on_what,stderr);
+      fputc('\n',stderr);
+      exit(1);
+  }
+
+int  BindAccept(char *addr) {
+      int z;
+      int s;
+      struct sockaddr_in adr_srvr;
+      struct sockaddr_in adr_clnt;
+      int len_inet;
+
+      /*
+      * Create a TCP/IP socket to use:
+       */
+      s = socket(PF_INET,SOCK_STREAM,0);
+      if ( s == -1 )
+          bail("socket()");
+
+      /*
+       * Bind the server address:
+       */
+      len_inet = sizeof adr_srvr;
+      z = mkaddr(&adr_srvr,&len_inet,
+      addr,"tcp");
+
+      if ( z != 0 ) {
+          puts("Bad address/port");
+          exit(1);
+      }
+
+      /*
+       * Bind server address:
+       */
+      z = bind(s,(struct sockaddr *)&adr_srvr,
+             len_inet);
+      if ( z == -1 )
+          bail("bind(2)");
+
+      /*
+       * Set listen mode:
+       */
+      if ( listen(s,10) == -1 )
+          bail("listen(2)");
+
+      /*
+       * Wait for a connect:
+       */
+      len_inet = sizeof adr_clnt;
+
+      z = accept(s,
+          (struct sockaddr *)&adr_clnt,
+          &len_inet);
+
+      if ( z == -1 )
+              bail("accept(2)");
+
+      close(s);   /* No longer needed */
+      return z;   /* Connected socket */
+  }
+int Connect(char *addr) {
+     int z;
+     int s;
+     struct sockaddr_in adr_srvr;
+     int len_inet;
+     /*
+      * Create a TDP/IP socket to use:
+      */
+     s = socket(PF_INET,SOCK_STREAM,0);
+     if ( s == -1 )
+         bail("socket()");
+
+     /*
+      * Bind the server address:
+      */
+     len_inet = sizeof adr_srvr;
+     z = mkaddr(&adr_srvr,&len_inet,
+         addr,"tcp");
+
+     if ( z != 0 ) {
+        puts("Bad address/port");
+         exit(1);
+     }
+
+     /*
+      * Connect to server:
+      */
+     len_inet = sizeof adr_srvr;
+
+     z = connect(s,
+         (struct sockaddr *)&adr_srvr,
+         len_inet);
+
+     if ( z == -1 )
+             bail("connect(2)");
+
+     return s;   /* Connected socket */
+ }
+
+\end{lstlisting}
+
+\begin{lstlisting}
+
 /* tcpclient01.c */ 
 
-sockfd = Tcp_connect(argv[1], argv[2]);
-write(sockfd, "123",3);
-printf("write 3	bytes from nornal data\n");
-sleep(1);
-send(sockfd, "4", 1, MSG_OOB);
-printf("write 1	bytes from OOB data\n");
-sleep(1);
-write(sockfd, "56",2);
-printf("write 2 bytes from nornal data\n");
-sleep(1);
-send(sockfd, "7", 1, MSG_OOB);
-printf("write 1 bytes from OOB data\n");
-sleep(1);
-write(sockfd, "89",2);
-printf("write 2 bytes from nornal data\n");
-sleep(1);
+#include "bindacpt.h"
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <string.h>
+#include <signal.h>
+#include <fcntl.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <netdb.h>
+#include <ctype.h>  
+
+static void iband(int s,char *str) {
+      int z;
+
+      z = send(s,str,strlen(str),0);
+      if ( z == -1 )
+          bail("send(2)");
+
+      printf("ib: '%s' (%d)\n",str,z);
+  }
+
+  /*
+   * Send out-of-band data:
+   */
+  static void
+  oband(int s,char *str) {
+      int z;
+
+      z = send(s,str,strlen(str),MSG_OOB);
+      if ( z == -1 )
+          bail("send(2)");
+
+     printf("OOB '%s' (%d)\n",str,z);
+  }
+
+  int
+  main(int argc,char **argv) {
+      int s = -1;      /* Socket */
+
+      s = Connect(argc >= 2
+          ? argv[1]
+          : "127.0.0.1:9011");
+
+      iband(s,"In the beginning");
+      sleep(1);
+      iband(s,"Linus begat Linux,");
+      sleep(1);
+
+      iband(s,"and the Penguins");
+      sleep(1);
+
+      oband(s,"rejoiced");
+      sleep(1);
+
+      iband(s,"exceedingly.");
+      close(s);
+
+      return 0;
+  }
 
 \end{lstlisting}
 
@@ -394,43 +683,50 @@ sleep(1);
 
 /* tcpserver01.c */ 
 
-#include "unp.h"
-int listenfd, confd;
-void sig_urg(int	signo)
+#include "bindacpt.h"
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <string.h>
+#include <signal.h>
+#include <fcntl.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <netdb.h>
+#include <ctype.h>  
+
+int listenfd;
+
+int	main(int argc, char **argv)
 {
-	char buf[100];
 	int	n;
-	printf("SIGURG received \n");
-	n = recv(confd, buf, sizeof(buf)-1, MSG_OOB);
-	buf[n] = 0;
-	fprintf(stdout, "read %d OOB bytes :%s\n", n, buf);
-}
-int	main(int argc, char	**argv)
-{
-	int	n;
-	char buf[100];
-	if(argc	== 2) listenfd = Tcp_listen(NULL, argv[1], NULL);
-	else if(argc == 3) listenfd = Tcp_listen(argv[1], argv[2], NULL);
-	else fprintf(stderr, " usage: tcpserver [ <host> ] <port#>\n");
-	
-	confd = Accept(listenfd,  NULL, NULL);
-	Signal(SIGURG, sig_urg);
-	Fcntl(confd, F_SETOWN, getpid());
-	for(;;)
-	{
-		if((n = read(confd, buf, 100 - 1)) == 0)
-		{
-			printf("recv finished\n");
-			exit(0);
-		}
-		buf[n] = 0;
-		fprintf(stdout, "read %d bytes : %s\n", n, buf);
-	}
+	int z;
+	char buf[256];
+	listenfd = BindAccept(argc >= 2? argv[1]: "127.0.0.1:9011");
+	z = fcntl(listenfd,F_SETOWN,getpid());
+	if ( z == -1 ) bail("fcntl(2)");
+	signal(SIGURG,sigurg);
+	for (;;) {
+          z = recv(listenfd,buf,sizeof buf,0);
+          if ( z == -1 )
+              bail("recv(2)");
+          if ( z == 0 )
+              break;
+          buf[z] = 0;
+
+          printf("rcv '%s' (%d)\n",
+              buf, z);
+     }
+	  close(listenfd);
+	  return 0;
 	exit(0);
 }
 
 \end{lstlisting}
-
+\pagebreak
 \item What is the sequence number of the TCP SYN segment that is used to initiate the TCP
 connection between the client computer and nitdgp.ac.in?
 
