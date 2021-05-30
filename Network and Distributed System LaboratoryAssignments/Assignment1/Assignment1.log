@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.28)  28 MAY 2021 21:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.28)  30 MAY 2021 23:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -102,20 +102,20 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 (./Assignment1.aux)
 \openout1 = `Assignment1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -177,83 +177,83 @@ e
 <images/NITDGP.png, id=1, 314.17375pt x 321.2pt>
 File: images/NITDGP.png Graphic file (type png)
 <use images/NITDGP.png>
-Package pdftex.def Info: images/NITDGP.png  used on input line 28.
+Package pdftex.def Info: images/NITDGP.png  used on input line 30.
 (pdftex.def)             Requested size: 113.81102pt x 116.35237pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 28.
+(Font)              <12> on input line 30.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 28.
+(Font)              <8> on input line 30.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 28.
+(Font)              <6> on input line 30.
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/NITDGP.png>]
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 4
-2.
+4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 42.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 44.
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 5
-4.
+6.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 54.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 56.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 63.
+(Font)              <7> on input line 65.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 63.
+(Font)              <5> on input line 65.
  [2] [3] [4] [5]
 <images/Question11.png, id=28, 1346.02875pt x 488.82625pt>
 File: images/Question11.png Graphic file (type png)
 <use images/Question11.png>
-Package pdftex.def Info: images/Question11.png  used on input line 213.
+Package pdftex.def Info: images/Question11.png  used on input line 215.
 (pdftex.def)             Requested size: 700.0pt x 254.21349pt.
 <images/Question12.png, id=29, 1371.1225pt x 707.64375pt>
 File: images/Question12.png Graphic file (type png)
 <use images/Question12.png>
-Package pdftex.def Info: images/Question12.png  used on input line 215.
+Package pdftex.def Info: images/Question12.png  used on input line 217.
 (pdftex.def)             Requested size: 700.0pt x 361.28226pt.
 
 [6 <./images/Question11.png>] [7 <./images/Question12.png>] [8] [9]
 <images/Question13.png, id=45, 1371.1225pt x 503.8825pt>
 File: images/Question13.png Graphic file (type png)
 <use images/Question13.png>
-Package pdftex.def Info: images/Question13.png  used on input line 340.
+Package pdftex.def Info: images/Question13.png  used on input line 342.
 (pdftex.def)             Requested size: 700.0pt x 257.25346pt.
  [10]
 <images/Question14.png, id=49, 1371.1225pt x 707.64375pt>
 File: images/Question14.png Graphic file (type png)
 <use images/Question14.png>
-Package pdftex.def Info: images/Question14.png  used on input line 342.
+Package pdftex.def Info: images/Question14.png  used on input line 344.
 (pdftex.def)             Requested size: 700.0pt x 361.28226pt.
 
 [11 <./images/Question13.png>] [12 <./images/Question14.png>]
 <images/Question21.png, id=58, 1371.1225pt x 710.655pt>
 File: images/Question21.png Graphic file (type png)
 <use images/Question21.png>
-Package pdftex.def Info: images/Question21.png  used on input line 350.
+Package pdftex.def Info: images/Question21.png  used on input line 352.
 (pdftex.def)             Requested size: 700.0pt x 362.81963pt.
 <images/Question22.png, id=59, 1371.1225pt x 710.655pt>
 File: images/Question22.png Graphic file (type png)
 <use images/Question22.png>
-Package pdftex.def Info: images/Question22.png  used on input line 351.
+Package pdftex.def Info: images/Question22.png  used on input line 353.
 (pdftex.def)             Requested size: 700.0pt x 362.81963pt.
 <images/Question23.png, id=60, 1371.1225pt x 707.64375pt>
 File: images/Question23.png Graphic file (type png)
 <use images/Question23.png>
-Package pdftex.def Info: images/Question23.png  used on input line 352.
+Package pdftex.def Info: images/Question23.png  used on input line 354.
 (pdftex.def)             Requested size: 700.0pt x 361.28226pt.
 <images/Question24.png, id=61, 1371.1225pt x 707.64375pt>
 File: images/Question24.png Graphic file (type png)
 <use images/Question24.png>
-Package pdftex.def Info: images/Question24.png  used on input line 353.
+Package pdftex.def Info: images/Question24.png  used on input line 355.
 (pdftex.def)             Requested size: 700.0pt x 361.28226pt.
  [13 <./images/Question21.png>] [14 <./images/Question22.png>] [15 <./images/Qu
 estion23.png>]
@@ -261,73 +261,73 @@ estion23.png>]
 <images/Question3A1.png, id=79, 1371.1225pt x 709.65125pt>
 File: images/Question3A1.png Graphic file (type png)
 <use images/Question3A1.png>
-Package pdftex.def Info: images/Question3A1.png  used on input line 365.
+Package pdftex.def Info: images/Question3A1.png  used on input line 367.
 (pdftex.def)             Requested size: 700.0pt x 362.30716pt.
  [17 <./images/Question3A1.png>]
 <images/Question3A2.png, id=84, 1371.1225pt x 707.64375pt>
 File: images/Question3A2.png Graphic file (type png)
 <use images/Question3A2.png>
-Package pdftex.def Info: images/Question3A2.png  used on input line 373.
+Package pdftex.def Info: images/Question3A2.png  used on input line 375.
 (pdftex.def)             Requested size: 700.0pt x 361.28226pt.
  [18 <./images/Question3A2.png>]
 <images/Question3A3.png, id=89, 1371.1225pt x 709.65125pt>
 File: images/Question3A3.png Graphic file (type png)
 <use images/Question3A3.png>
-Package pdftex.def Info: images/Question3A3.png  used on input line 380.
+Package pdftex.def Info: images/Question3A3.png  used on input line 382.
 (pdftex.def)             Requested size: 700.0pt x 362.30716pt.
  [19 <./images/Question3A3.png>]
 <images/Question3A4.png, id=95, 1371.1225pt x 707.64375pt>
 File: images/Question3A4.png Graphic file (type png)
 <use images/Question3A4.png>
-Package pdftex.def Info: images/Question3A4.png  used on input line 387.
+Package pdftex.def Info: images/Question3A4.png  used on input line 389.
 (pdftex.def)             Requested size: 700.0pt x 361.28226pt.
  [20 <./images/Question3A4.png>]
 <images/Question3A5.png, id=100, 1371.1225pt x 710.655pt>
 File: images/Question3A5.png Graphic file (type png)
 <use images/Question3A5.png>
-Package pdftex.def Info: images/Question3A5.png  used on input line 394.
+Package pdftex.def Info: images/Question3A5.png  used on input line 396.
 (pdftex.def)             Requested size: 700.0pt x 362.81963pt.
 [21 <./images/Question3A5.png>]
 <images/Question3A6.png, id=105, 1371.1225pt x 709.65125pt>
 File: images/Question3A6.png Graphic file (type png)
 <use images/Question3A6.png>
-Package pdftex.def Info: images/Question3A6.png  used on input line 401.
+Package pdftex.def Info: images/Question3A6.png  used on input line 403.
 (pdftex.def)             Requested size: 700.0pt x 362.30716pt.
  [22 <./images/Question3A6.png>]
 <images/Question3B.png, id=110, 1371.1225pt x 512.91624pt>
 File: images/Question3B.png Graphic file (type png)
 <use images/Question3B.png>
-Package pdftex.def Info: images/Question3B.png  used on input line 409.
+Package pdftex.def Info: images/Question3B.png  used on input line 411.
 (pdftex.def)             Requested size: 700.0pt x 261.86557pt.
  [23 <./images/Question3B.png>] [24] [25] [26] [27] [28] [29] [30]
 <images/Question3C1.png, id=137, 1371.1225pt x 673.51625pt>
 File: images/Question3C1.png Graphic file (type png)
 <use images/Question3C1.png>
-Package pdftex.def Info: images/Question3C1.png  used on input line 781.
+Package pdftex.def Info: images/Question3C1.png  used on input line 783.
 (pdftex.def)             Requested size: 700.0pt x 343.85872pt.
  [31]
 <images/Question3C2.png, id=142, 1371.1225pt x 770.88pt>
 File: images/Question3C2.png Graphic file (type png)
 <use images/Question3C2.png>
-Package pdftex.def Info: images/Question3C2.png  used on input line 783.
+Package pdftex.def Info: images/Question3C2.png  used on input line 785.
 (pdftex.def)             Requested size: 700.0pt x 393.56706pt.
  [32 <./images/Question3C1.png>] [33 <./images/Question3C2.png>]
 <images/Question3D.png, id=151, 1371.1225pt x 707.64375pt>
 File: images/Question3D.png Graphic file (type png)
 <use images/Question3D.png>
-Package pdftex.def Info: images/Question3D.png  used on input line 792.
+Package pdftex.def Info: images/Question3D.png  used on input line 794.
 (pdftex.def)             Requested size: 700.0pt x 361.28226pt.
 <images/Question3F.png, id=152, 1371.1225pt x 710.655pt>
 File: images/Question3F.png Graphic file (type png)
 <use images/Question3F.png>
-Package pdftex.def Info: images/Question3F.png  used on input line 803.
+Package pdftex.def Info: images/Question3F.png  used on input line 805.
 (pdftex.def)             Requested size: 700.0pt x 362.81963pt.
  [34 <./images/Question3D.png>]
 [35 <./images/Question3F.png>] (./Assignment1.aux) ) 
 Here is how much of TeX's memory you used:
  3458 strings out of 481239
  48976 string characters out of 5920377
- 304955 words of memory out of 5000000
+ 304991 words of memory out of 5000000
  18732 multiletter control sequences out of 15000+600000
  536928 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -340,7 +340,7 @@ sfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 r10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
 /share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Assignment1.pdf (35 pages, 5714143 bytes).
+Output written on Assignment1.pdf (35 pages, 5714386 bytes).
 PDF statistics:
  187 PDF objects out of 1000 (max. 8388607)
  101 compressed objects within 2 object streams
