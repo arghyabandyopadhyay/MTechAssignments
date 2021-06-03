@@ -66,6 +66,8 @@
 	Python Code:
 	
 	import numpy as np
+	from collections import Counter
+	import math
 	
 	def check_loop(p, row, column):
 		p[row, column] = -1
@@ -384,46 +386,44 @@
 \begin{lstlisting}    
 		
 	if __name__ == '__main__':
-		cm = np.array([[6.0, 4.0, 1.0, 5.0], 
-			[8.0, 9.0, 2.0, 7.0],
-			[4.0, 3.0, 6.0, 2.0]])
-		s = np.array([14.0, 12.0, 4.0])
-		d = np.array([6.0, 10.0, 10.0, 4.0])
-		c = cm.copy()
+		cm_main = np.array([[7.0, 6, 4, 5, 9],
+			[8, 5, 6, 7, 8],
+			[6, 8, 9, 6, 5],
+			[5, 7, 7, 8, 6]])
+		s_main = np.array([40.0, 30, 20, 10])
+		d_main = np.array([30.0, 30, 15, 20, 5])
+		c_main = cm_main.copy()
 		print("The Cost Matrix is: ")
-		print(c)
-		print("The Supply is: ", s)
-		print("The Demand is: ", d)
-		m, n = c.shape
-		print("No of Rows & No of Columns: (", m, ", ", n, ")")
-		total_cost = 0
-		no_alloc = 0
-		total_demand = np.sum(d)
-		total_supply = np.sum(s)
-		alloc = []
+		print(c_main)
+		print("The Supply is: ", s_main)
+		print("The Demand is: ", d_main)
+		m_main, n_main = c_main.shape
+		print("No of Rows & No of Columns: (", m_main, ", ", n_main, ")")
+		total_demand = np.sum(d_main)
+		total_supply = np.sum(s_main)
 		if total_demand == total_supply:
 			print("It is a Balanced Transportation Problem")
 		else:
 			print("It is an UnBalanced Transportation Problem")
 			if total_demand > total_supply:
-				new = np.array(np.zeros(n))
-				c = np.row_stack((c, new))
-				s = np.append(s, total_demand - total_supply)
-				m = m + 1
+				new = np.array(np.zeros(n_main))
+				c_main = np.row_stack((c_main, new))
+				s_main = np.append(s, total_demand - total_supply)
+				m_main = m_main + 1
 			else:
-				new = np.array(np.zeros(m))
-				c = np.column_stack((c, new))
+				new = np.array(np.zeros(m_main))
+				c_main = np.column_stack((c_main, new))
 				d = np.append(d, total_supply - total_demand)
-				n = n + 1
+				n_main = n_main + 1
 			print("The New Balanced Cost Matrix is: ")
-			print(c)
-			print("The Supply is: ", s)
-			print("The Demand is: ", d)
+			print(c_main)
+			print("The Supply is: ", s_main)
+			print("The Demand is: ", d_main)
 		print("Northwest corner method")
-		nwcr(c_main.copy(), m, n, s_main.copy(), d_main.copy())
+		nwcr(c_main.copy(), m_main, n_main, s_main.copy(), d_main.copy())
 		print()
 		print("Least Cost Method")
-		lcm(c_main.copy(), m, n, s_main.copy(), d_main.copy())
+		lcm(c_main.copy(), m_main, n_main, s_main.copy(), d_main.copy())
 		print()
 
 \end{lstlisting}
