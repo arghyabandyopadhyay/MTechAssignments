@@ -7,6 +7,34 @@
 \usepackage[paperheight=11in,paperwidth=8.5in,margin=0in]{geometry}
 \usepackage{amsmath}
 \usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{1,1,1}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
 \date{23nd May 2021}
 \begin{document}
 \begin{titlepage}
@@ -46,68 +74,12 @@
 \begin{lstlisting}
 
 	Python Code:
-	
-	import numpy as np
-	
-	if __name__ == '__main__':
-		total_cost = 0
-		no_alloc = 0
-		
-		# initiatizes the cost matrix
-		cm = np.array([
-			[9, 12, 9, 6, 9, 10, 5], 
-			[7, 3, 7, 7, 5, 5, 6], 
-			[6, 5, 9, 11, 3, 11, 2], 
-			[6, 8, 11, 2, 2, 10, 9],
-			[4, 4, 6, 2, 4, 2, 0]])
-		print("Cost Matrix")
-		
-		# prints the cost matrix
-		print(cm)
-		
-		# calculates the no of rows and columns
-		r, c = cm.shape
-		print("Rows, Columns: (", r - 1, ",", c - 1, ")")
-		
-		# slices the cost matrix to get the sum of the demand 
-		# and supply vectors
-		total_demand = np.sum(cm[r - 1, :])
-		total_supply = np.sum(cm[:, c - 1])
-		if total_demand == total_supply:
-			print("Balanced Transportation Problem.")
-		else:
-			print("Unbalanced Transportation Problem")
-		i = 0
-		j = 0
-		
-		# This loop does allocation to the cells according to
-		# the requirement and possible supply
-		while (i < r - 1) and (j < c - 1):
-			x = min(cm[r - 1, j], cm[i, c - 1])
-			cm[r - 1, j] = cm[r - 1, j] - x
-			cm[i, c - 1] = cm[i, c - 1] - x
-			total_cost = total_cost + x * cm[i, j]
-			no_alloc = no_alloc + 1
-			if cm[r - 1, j] < cm[i, c - 1]:
-				j = j + 1
-			elif cm[r - 1, j] > cm[i, c - 1]:
-				i = i + 1
-			else:
-				i = i + 1
-				j = j + 1
-			print("Total Cost: ", total_cost)
-			print("No of Allocation: ", no_alloc)
-			
-			
-			
-			
-			# checks for the condition m+n-1 = no of allocated cells
-			if ((r - 1) + (c - 1) - 1) == no_alloc and 
-					total_demand == total_supply:
-				print("Non Degenerate & Feasible Solution")
-			else:
-				print("Degenerate Solution")
-	
+
+\end{lstlisting}
+\lstinputlisting[language=Python]{PythonCode/assignment2problem1.py}
+\pagebreak
+\begin{lstlisting}
+
 	Output:
 
 \end{lstlisting}
@@ -129,67 +101,12 @@
 \begin{lstlisting}
 
 	Python Code:
-	
-	import numpy as np
-	
-	if __name__ == '__main__':
-		total_cost = 0
-		no_alloc = 0
-		
-		# initiatizes the cost matrix
-		cm = np.array([
-		[2, 3, 11, 7, 6], 
-		[1, 0, 6, 1, 1], 
-		[5, 8, 15, 9, 10], 
-		[7, 5, 3, 2, 0]])
-		print("Cost Matrix")
-		
-		# prints the cost matrix
-		print(cm)
-		
-		# calculates the no of rows and columns
-		r, c = cm.shape
-		print("Rows, Columns: (", r - 1, ",", c - 1, ")")
-		
-		# slices the cost matrix to get the sum of the demand 
-		# and supply vectors
-		total_demand = np.sum(cm[r - 1, :])
-		total_supply = np.sum(cm[:, c - 1])
-		if total_demand == total_supply:
-			print("Balanced Transportation Problem.")
-		else:
-			print("Unbalanced Transportation Problem")
-		i = 0
-		j = 0
-		
-		# This loop does allocation to the cells according to
-		# the requirement and possible supply
-		while (i < r - 1) and (j < c - 1):
-			x = min(cm[r - 1, j], cm[i, c - 1])
-			cm[r - 1, j] = cm[r - 1, j] - x
-			cm[i, c - 1] = cm[i, c - 1] - x
-			total_cost = total_cost + x * cm[i, j]
-			no_alloc = no_alloc + 1
-			if cm[r - 1, j] < cm[i, c - 1]:
-				j = j + 1
-			elif cm[r - 1, j] > cm[i, c - 1]:
-				i = i + 1
-			else:
-				i = i + 1
-				j = j + 1
-			print("Total Cost: ", total_cost * 100)
-			print("No of Allocation: ", no_alloc)
-			
-			
-			
-			
-			# checks for the condition m+n-1 = no of allocated cells
-			if ((r - 1) + (c - 1) - 1) == no_alloc and 
-					total_demand == total_supply:
-				print("Non Degenerate & Feasible Solution")
-			else:
-				print("Degenerate Solution")
-	
+
+\end{lstlisting}
+\lstinputlisting[language=Python]{PythonCode/assignment2problem2.py}
+\pagebreak
+\begin{lstlisting}
+
 	Output:
 
 \end{lstlisting}

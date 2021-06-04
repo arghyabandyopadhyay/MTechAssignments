@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.28)  4 JUN 2021 16:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.28)  4 JUN 2021 16:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Assignment2.tex
-(./Assignment2.tex
+**Assignment4.tex
+(./Assignment4.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14>
 (/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
@@ -184,8 +184,8 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count199
 \l__pdf_internal_box=\box49
 )
-(./Assignment2.aux)
-\openout1 = `Assignment2.aux'.
+No file Assignment4.aux.
+\openout1 = `Assignment4.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
 LaTeX Font Info:    ... okay on input line 39.
@@ -201,7 +201,6 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
 LaTeX Font Info:    ... okay on input line 39.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
 LaTeX Font Info:    ... okay on input line 39.
-
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count266
@@ -268,111 +267,220 @@ Package pdftex.def Info: images/NITDGP.png  used on input line 59.
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/NITDGP.png>]
-<images/Page1.jpeg, id=10, 963.6pt x 1284.8pt>
+<images/Page1.jpeg, id=10, 927.465pt x 1284.8pt>
 File: images/Page1.jpeg Graphic file (type jpg)
 <use images/Page1.jpeg>
 Package pdftex.def Info: images/Page1.jpeg  used on input line 67.
-(pdftex.def)             Requested size: 614.30527pt x 722.71783pt.
-<images/Page2.jpeg, id=11, 963.6pt x 1284.8pt>
+(pdftex.def)             Requested size: 614.3082pt x 722.71783pt.
+<images/Page2.jpeg, id=11, 911.405pt x 1284.8pt>
 File: images/Page2.jpeg Graphic file (type jpg)
 <use images/Page2.jpeg>
 Package pdftex.def Info: images/Page2.jpeg  used on input line 69.
-(pdftex.def)             Requested size: 614.30527pt x 794.97983pt.
-<images/Page3.jpeg, id=12, 963.6pt x 1284.8pt>
+(pdftex.def)             Requested size: 614.3096pt x 794.97983pt.
+<images/Page3.jpeg, id=12, 905.3825pt x 1284.8pt>
 File: images/Page3.jpeg Graphic file (type jpg)
 <use images/Page3.jpeg>
 Package pdftex.def Info: images/Page3.jpeg  used on input line 70.
-(pdftex.def)             Requested size: 614.30527pt x 794.97983pt.
-<images/Page4.jpeg, id=13, 963.6pt x 1284.8pt>
+(pdftex.def)             Requested size: 614.2981pt x 794.97983pt.
+<images/Page4.jpeg, id=13, 860.21375pt x 1191.45125pt>
 File: images/Page4.jpeg Graphic file (type jpg)
 <use images/Page4.jpeg>
 Package pdftex.def Info: images/Page4.jpeg  used on input line 71.
-(pdftex.def)             Requested size: 614.30527pt x 794.97983pt.
-<images/Page5.jpeg, id=14, 963.6pt x 1284.8pt>
+(pdftex.def)             Requested size: 614.29999pt x 794.95943pt.
+<images/Page5.jpeg, id=14, 936.49875pt x 1284.8pt>
 File: images/Page5.jpeg Graphic file (type jpg)
 <use images/Page5.jpeg>
 Package pdftex.def Info: images/Page5.jpeg  used on input line 72.
-(pdftex.def)             Requested size: 614.30527pt x 794.97983pt.
-<images/Page6.jpeg, id=15, 963.6pt x 1284.8pt>
+(pdftex.def)             Requested size: 614.33287pt x 794.97983pt.
+<images/Page6.jpeg, id=15, 924.45375pt x 1284.8pt>
 File: images/Page6.jpeg Graphic file (type jpg)
 <use images/Page6.jpeg>
 Package pdftex.def Info: images/Page6.jpeg  used on input line 73.
-(pdftex.def)             Requested size: 614.30527pt x 794.97983pt.
+(pdftex.def)             Requested size: 614.30264pt x 794.97983pt.
+<images/Page7.jpeg, id=16, 934.49126pt x 1284.8pt>
+File: images/Page7.jpeg Graphic file (type jpg)
+<use images/Page7.jpeg>
+Package pdftex.def Info: images/Page7.jpeg  used on input line 74.
+(pdftex.def)             Requested size: 614.32782pt x 794.97983pt.
+<images/Page8.jpeg, id=17, 914.41624pt x 1284.8pt>
+File: images/Page8.jpeg Graphic file (type jpg)
+<use images/Page8.jpeg>
+Package pdftex.def Info: images/Page8.jpeg  used on input line 75.
+(pdftex.def)             Requested size: 614.3161pt x 794.97983pt.
+<images/Page9.jpeg, id=18, 943.525pt x 1284.8pt>
+File: images/Page9.jpeg Graphic file (type jpg)
+<use images/Page9.jpeg>
+Package pdftex.def Info: images/Page9.jpeg  used on input line 76.
+(pdftex.def)             Requested size: 614.30617pt x 794.97983pt.
+<images/Page10.jpeg, id=19, 925.4575pt x 1284.8pt>
+File: images/Page10.jpeg Graphic file (type jpg)
+<use images/Page10.jpeg>
+Package pdftex.def Info: images/Page10.jpeg  used on input line 77.
+(pdftex.def)             Requested size: 614.30594pt x 794.97983pt.
+<images/Page11.jpeg, id=20, 939.51pt x 1284.8pt>
+File: images/Page11.jpeg Graphic file (type jpg)
+<use images/Page11.jpeg>
+Package pdftex.def Info: images/Page11.jpeg  used on input line 78.
+(pdftex.def)             Requested size: 614.28688pt x 794.97983pt.
+<images/Page12.jpeg, id=21, 932.48375pt x 1284.8pt>
+File: images/Page12.jpeg Graphic file (type jpg)
+<use images/Page12.jpeg>
+Package pdftex.def Info: images/Page12.jpeg  used on input line 79.
+(pdftex.def)             Requested size: 614.31712pt x 794.97983pt.
+<images/Page13.jpeg, id=22, 903.375pt x 1284.8pt>
+File: images/Page13.jpeg Graphic file (type jpg)
+<use images/Page13.jpeg>
+Package pdftex.def Info: images/Page13.jpeg  used on input line 80.
+(pdftex.def)             Requested size: 614.32823pt x 794.97983pt.
+<images/Page14.jpeg, id=23, 918.43124pt x 1284.8pt>
+File: images/Page14.jpeg Graphic file (type jpg)
+<use images/Page14.jpeg>
+Package pdftex.def Info: images/Page14.jpeg  used on input line 81.
+(pdftex.def)             Requested size: 614.32271pt x 794.97983pt.
+<images/Page15.jpeg, id=24, 899.36pt x 1284.8pt>
+File: images/Page15.jpeg Graphic file (type jpg)
+<use images/Page15.jpeg>
+Package pdftex.def Info: images/Page15.jpeg  used on input line 82.
+(pdftex.def)             Requested size: 614.31506pt x 794.97983pt.
+<images/Page16.jpeg, id=25, 939.51pt x 1284.8pt>
+File: images/Page16.jpeg Graphic file (type jpg)
+<use images/Page16.jpeg>
+Package pdftex.def Info: images/Page16.jpeg  used on input line 83.
+(pdftex.def)             Requested size: 614.28688pt x 794.97983pt.
+<images/Page17.jpeg, id=26, 907.39pt x 1284.8pt>
+File: images/Page17.jpeg Graphic file (type jpg)
+<use images/Page17.jpeg>
+Package pdftex.def Info: images/Page17.jpeg  used on input line 84.
+(pdftex.def)             Requested size: 614.3033pt x 794.97983pt.
+<images/Page18.jpeg, id=27, 900.36375pt x 1284.8pt>
+File: images/Page18.jpeg Graphic file (type jpg)
+<use images/Page18.jpeg>
+Package pdftex.def Info: images/Page18.jpeg  used on input line 85.
+(pdftex.def)             Requested size: 614.3275pt x 794.97983pt.
+<images/Page19.jpeg, id=28, 891.33pt x 1284.8pt>
+File: images/Page19.jpeg Graphic file (type jpg)
+<use images/Page19.jpeg>
+Package pdftex.def Info: images/Page19.jpeg  used on input line 86.
+(pdftex.def)             Requested size: 614.29755pt x 794.97983pt.
+<images/Page20.jpeg, id=29, 932.48375pt x 1284.8pt>
+File: images/Page20.jpeg Graphic file (type jpg)
+<use images/Page20.jpeg>
+Package pdftex.def Info: images/Page20.jpeg  used on input line 87.
+(pdftex.def)             Requested size: 614.31712pt x 794.97983pt.
+<images/Page21.jpeg, id=30, 909.3975pt x 1284.8pt>
+File: images/Page21.jpeg Graphic file (type jpg)
+<use images/Page21.jpeg>
+Package pdftex.def Info: images/Page21.jpeg  used on input line 88.
+(pdftex.def)             Requested size: 614.3025pt x 794.97983pt.
+<images/Page22.jpeg, id=31, 909.3975pt x 1284.8pt>
+File: images/Page22.jpeg Graphic file (type jpg)
+<use images/Page22.jpeg>
+Package pdftex.def Info: images/Page22.jpeg  used on input line 89.
+(pdftex.def)             Requested size: 614.3025pt x 794.97983pt.
+<images/Page23.jpeg, id=32, 909.3975pt x 1284.8pt>
+File: images/Page23.jpeg Graphic file (type jpg)
+<use images/Page23.jpeg>
+Package pdftex.def Info: images/Page23.jpeg  used on input line 90.
+(pdftex.def)             Requested size: 614.3025pt x 794.97983pt.
+<images/Page24.jpeg, id=33, 904.37875pt x 1284.8pt>
+File: images/Page24.jpeg Graphic file (type jpg)
+<use images/Page24.jpeg>
+Package pdftex.def Info: images/Page24.jpeg  used on input line 91.
+(pdftex.def)             Requested size: 614.29324pt x 794.97983pt.
+
+Overfull \hbox (616.92009pt too wide) in paragraph at lines 69--92
+[] []
+ []
+
+
+Overfull \hbox (616.90627pt too wide) in paragraph at lines 69--92
+[] []
+ []
 
 [2 <./images/Page1.jpeg>] [3 <./images/Page2.jpeg>] [4 <./images/Page3.jpeg>]
 [5 <./images/Page4.jpeg>] [6 <./images/Page5.jpeg>] [7 <./images/Page6.jpeg>]
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+[8 <./images/Page7.jpeg>] [9 <./images/Page8.jpeg>] [10 <./images/Page9.jpeg>]
+[11 <./images/Page10.jpeg>] [12 <./images/Page11.jpeg> <./images/Page12.jpeg>]
+[13 <./images/Page13.jpeg>] [14 <./images/Page14.jpeg>] [15 <./images/Page15.jp
+eg>] [16 <./images/Page16.jpeg> <./images/Page17.jpeg>] [17 <./images/Page18.jp
+eg>] [18 <./images/Page19.jpeg>] [19 <./images/Page20.jpeg>] [20 <./images/Page
+21.jpeg>] [21 <./images/Page22.jpeg>] [22 <./images/Page23.jpeg>] [23 <./images
+/Page24.jpeg>] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
-(./PythonCode/assignment2problem1.py) [8]
-<images/Output1.png, id=41, 573.14125pt x 488.82625pt>
+(./PythonCode/assignment4problem1.py [24] [25] [26] [27] [28]) [29]
+<images/Output1.png, id=125, 1043.9pt x 552.0625pt>
 File: images/Output1.png Graphic file (type png)
 <use images/Output1.png>
-Package pdftex.def Info: images/Output1.png  used on input line 87.
-(pdftex.def)             Requested size: 550.00821pt x 600.01453pt.
-<images/Page7.jpeg, id=42, 963.6pt x 1284.8pt>
-File: images/Page7.jpeg Graphic file (type jpg)
-<use images/Page7.jpeg>
-Package pdftex.def Info: images/Page7.jpeg  used on input line 94.
-(pdftex.def)             Requested size: 614.30527pt x 722.71783pt.
- [9 <./images/Output1.png>]
-<images/Page8.jpeg, id=47, 963.6pt x 1284.8pt>
-File: images/Page8.jpeg Graphic file (type jpg)
-<use images/Page8.jpeg>
-Package pdftex.def Info: images/Page8.jpeg  used on input line 96.
-(pdftex.def)             Requested size: 614.30527pt x 794.97983pt.
-<images/Page9.jpeg, id=48, 963.6pt x 1284.8pt>
-File: images/Page9.jpeg Graphic file (type jpg)
-<use images/Page9.jpeg>
-Package pdftex.def Info: images/Page9.jpeg  used on input line 97.
-(pdftex.def)             Requested size: 614.30527pt x 794.97983pt.
-<images/Page10.jpeg, id=49, 963.6pt x 1284.8pt>
-File: images/Page10.jpeg Graphic file (type jpg)
-<use images/Page10.jpeg>
-Package pdftex.def Info: images/Page10.jpeg  used on input line 98.
-(pdftex.def)             Requested size: 614.30527pt x 794.97983pt.
-<images/Page11.jpeg, id=50, 963.6pt x 1284.8pt>
-File: images/Page11.jpeg Graphic file (type jpg)
-<use images/Page11.jpeg>
-Package pdftex.def Info: images/Page11.jpeg  used on input line 99.
-(pdftex.def)             Requested size: 614.30527pt x 794.97983pt.
-<images/Page12.jpeg, id=51, 963.6pt x 1284.8pt>
-File: images/Page12.jpeg Graphic file (type jpg)
-<use images/Page12.jpeg>
-Package pdftex.def Info: images/Page12.jpeg  used on input line 100.
-(pdftex.def)             Requested size: 614.30527pt x 794.97983pt.
- [10 <./images/Page7.jpeg>] [11 <./images/Page8.jpeg>] [12 <./images/Page9.jpeg
->] [13 <./images/Page10.jpeg>] [14 <./images/Page11.jpeg>] [15 <./images/Page12
-.jpeg>]
-(./PythonCode/assignment2problem2.py) [16]
-<images/Output2.png, id=74, 626.34pt x 534.99875pt>
+Package pdftex.def Info: images/Output1.png  used on input line 105.
+(pdftex.def)             Requested size: 550.0pt x 290.86485pt.
+<images/Output2.png, id=126, 967.615pt x 551.05875pt>
 File: images/Output2.png Graphic file (type png)
 <use images/Output2.png>
-Package pdftex.def Info: images/Output2.png  used on input line 114.
-(pdftex.def)             Requested size: 550.01492pt x 400.0154pt.
-<images/Output3.png, id=75, 612.2875pt x 278.03876pt>
+Package pdftex.def Info: images/Output2.png  used on input line 107.
+(pdftex.def)             Requested size: 550.0pt x 313.24066pt.
+<images/Output3.png, id=127, 962.59625pt x 555.07375pt>
 File: images/Output3.png Graphic file (type png)
 <use images/Output3.png>
-Package pdftex.def Info: images/Output3.png  used on input line 116.
-(pdftex.def)             Requested size: 550.02597pt x 200.00107pt.
- [17 <./images/Output2.png> <./images/Output3.png>] (./Assignment2.aux) ) 
+Package pdftex.def Info: images/Output3.png  used on input line 109.
+(pdftex.def)             Requested size: 550.0pt x 317.1576pt.
+ [30 <./images/Output1.png> <./images/Output2.png>]
+<images/Output4.png, id=133, 969.6225pt x 557.08125pt>
+File: images/Output4.png Graphic file (type png)
+<use images/Output4.png>
+Package pdftex.def Info: images/Output4.png  used on input line 111.
+(pdftex.def)             Requested size: 550.0pt x 316.00955pt.
+<images/Output5.png, id=134, 962.59625pt x 553.06625pt>
+File: images/Output5.png Graphic file (type png)
+<use images/Output5.png>
+Package pdftex.def Info: images/Output5.png  used on input line 113.
+(pdftex.def)             Requested size: 550.0pt x 316.01056pt.
+ [31 <./images/Output3.png> <./images/Output4.png>]
+<images/Output6.png, id=141, 964.60374pt x 552.0625pt>
+File: images/Output6.png Graphic file (type png)
+<use images/Output6.png>
+Package pdftex.def Info: images/Output6.png  used on input line 115.
+(pdftex.def)             Requested size: 550.0pt x 314.78839pt.
+<images/Output7.png, id=142, 967.615pt x 555.07375pt>
+File: images/Output7.png Graphic file (type png)
+<use images/Output7.png>
+Package pdftex.def Info: images/Output7.png  used on input line 117.
+(pdftex.def)             Requested size: 550.0pt x 315.52293pt.
+ [32 <./images/Output5.png> <./images/Output6.png>]
+<images/Output8.png, id=148, 970.62625pt x 557.08125pt>
+File: images/Output8.png Graphic file (type png)
+<use images/Output8.png>
+Package pdftex.def Info: images/Output8.png  used on input line 119.
+(pdftex.def)             Requested size: 550.0pt x 315.68654pt.
+<images/Output9.png, id=149, 1110.1475pt x 551.05875pt>
+File: images/Output9.png Graphic file (type png)
+<use images/Output9.png>
+Package pdftex.def Info: images/Output9.png  used on input line 121.
+(pdftex.def)             Requested size: 550.0pt x 273.01456pt.
+ [33 <./images/Output7.png> <./images/Output8.png>]
+<images/Output10.png, id=155, 963.6pt x 542.025pt>
+File: images/Output10.png Graphic file (type png)
+<use images/Output10.png>
+Package pdftex.def Info: images/Output10.png  used on input line 123.
+(pdftex.def)             Requested size: 550.0pt x 309.37926pt.
+ [34 <./images/Output9.png> <./images/Output10.png>] (./Assignment4.aux) ) 
 Here is how much of TeX's memory you used:
- 4750 strings out of 481239
- 62905 string characters out of 5920377
- 711703 words of memory out of 5000000
- 19992 multiletter control sequences out of 15000+600000
+ 5030 strings out of 481239
+ 66719 string characters out of 5920377
+ 862658 words of memory out of 5000000
+ 20277 multiletter control sequences out of 15000+600000
  533888 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,5n,42p,228b,1376s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Assignment2.pdf (17 pages, 1517338 bytes).
+ 30i,6n,42p,228b,1876s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Assignment4.pdf (34 pages, 2255292 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 176 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 176 words of extra memory for PDF output out of 10000 (max. 10000000)
 
