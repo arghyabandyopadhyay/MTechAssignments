@@ -1,0 +1,12 @@
+
+------------
+client_files/Question1Diagram.png
+Priority: 99
+Start Time: 2021-06-14T12:11:50.982433
+Question1Diagram.png
+Progress: 100.0 Packet #1
+End Time: 2021-06-14T12:11:51.088751
+No. of packets recv: 2
+No. of ACK sent: 2
+*Note: 1 packet is for file info.
+------------
