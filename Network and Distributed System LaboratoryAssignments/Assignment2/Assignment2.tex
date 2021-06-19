@@ -1,0 +1,145 @@
+\documentclass{article}
+\usepackage{geometry}
+\geometry{a4paper, landscape, margin=1.5cm}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\graphicspath{ {images/} }
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{1,1,1}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\author{\Large submitted by\\ Arghya Bandyopadhyay\\
+    	RollNo. 20CS4103\\}
+\title{\begin{center}
+       \bfseries\Large
+    	Assignment 2\\
+    	Of\\
+    	Network \& Distributed System Lab (CS2051)\\
+        Masters of Technology in Computer Science And Engineering\\
+    	\vskip1cm
+    	submitted to\\
+    	Dr Sujoy Saha\\
+    	Assistant Professor\\
+    	\&\\
+    	Dr Suvrojit Das\\
+    	Associate Professor\\
+    	Dept. of CSE\\
+    	\vskip1cm
+    	\includegraphics[width=4cm]{NITDGP}\\
+    	National Institute of Technology, Durgapur\\
+    \end{center}}
+\date{19 June 2021}
+\begin{document}
+\maketitle
+\pagebreak
+
+\begin{enumerate}
+\item Write TCP and UDP Chat Program.
+\begin{flushleft}
+\textbf{Answer.}
+\end{flushleft}
+
+\lstinputlisting[language=C]{CCode/tcp/tcpserver.c}
+\pagebreak
+\lstinputlisting[language=C]{CCode/tcp/tcpclient.c}
+\pagebreak
+
+\begin{figure}[h]
+\begin{subfigure}{.5\textwidth}
+\includegraphics[width=350pt]{Output1}
+\caption{TCPServer}
+\label{TCPServer}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+\includegraphics[width=350pt]{Output2}
+\caption{TCPClient}
+\label{TCPClient}
+\end{subfigure}
+\caption{Output:TCP}
+\label{fig:TCP}
+\end{figure}
+
+\pagebreak
+
+\lstinputlisting[language=C]{CCode/udp/udpserver.c}
+\pagebreak
+\lstinputlisting[language=C]{CCode/udp/udpclient.c}
+\pagebreak
+\begin{figure}[h]
+\begin{subfigure}{.5\textwidth}
+\includegraphics[width=350pt]{Output3}
+\caption{UDPServer}
+\label{TCPServer}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+\includegraphics[width=350pt]{Output4}
+\caption{UDPClient}
+\label{TCPClient}
+\end{subfigure}
+\caption{Output:UDP}
+\label{fig:UDP}
+\end{figure}
+
+\pagebreak
+
+\item Write a program to broadcast a message with UDP.
+\begin{flushleft}
+\textbf{Answer.}
+\end{flushleft}
+
+\lstinputlisting[language=C]{CCode/broadcast/udpBroadcastServer.c}
+\pagebreak
+\lstinputlisting[language=C]{CCode/broadcast/udpBroadcastClient1.c}
+\pagebreak
+\lstinputlisting[language=C]{CCode/broadcast/udpBroadcastClient2.c}
+\pagebreak
+
+\begin{figure}
+\begin{subfigure}{.3\textwidth}
+\includegraphics[width=200pt]{Output3}
+\caption{UDP Broadcast Server}
+\label{UDPBroadcastServer}
+\end{subfigure}
+\begin{subfigure}{.3\textwidth}
+\includegraphics[width=200pt]{Output4}
+\caption{UDP Broadcast Client1}
+\label{UDPBroadcastClient1}
+\end{subfigure}
+\begin{subfigure}{.3\textwidth}
+\includegraphics[width=200pt]{Output4}
+\caption{UDP Broadcast Client2}
+\label{UDPBroadcastClient2}
+\end{subfigure}
+\caption{Output:UDP Broadcast}
+\label{fig:UDPBroadcast}
+\end{figure}
+
+\end{enumerate}
+
+\end{document}
