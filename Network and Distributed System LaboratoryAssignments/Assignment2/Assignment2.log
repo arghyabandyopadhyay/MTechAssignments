@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.28)  19 JUN 2021 22:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.28)  20 JUN 2021 22:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -139,20 +139,7 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count190
 \l__pdf_internal_box=\box47
 )
-(./Assignment2.aux
-
-LaTeX Warning: Label `TCPServer' multiply defined.
-
-
-LaTeX Warning: Label `sub@TCPServer' multiply defined.
-
-
-LaTeX Warning: Label `TCPClient' multiply defined.
-
-
-LaTeX Warning: Label `sub@TCPClient' multiply defined.
-
-)
+(./Assignment2.aux)
 \openout1 = `Assignment2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
@@ -251,83 +238,91 @@ File: lstlang1.sty 2019/09/10 1.8c listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
 )
-(./CCode/tcp/tcpserver.c [2] [3]) [4] (./CCode/tcp/tcpclient.c [5]) [6]
-<images/Output1.png, id=30, 690.58pt x 706.64pt>
-File: images/Output1.png Graphic file (type png)
-<use images/Output1.png>
-Package pdftex.def Info: images/Output1.png  used on input line 75.
-(pdftex.def)             Requested size: 350.0pt x 358.13889pt.
+(./CCode/tcp/tcpserver.c [2]) [3] (./CCode/tcp/tcpclient.c [4]) [5]
+<images/Output2.png, id=27, 633.36626pt x 520.94624pt>
+File: images/Output2.png Graphic file (type png)
+<use images/Output2.png>
+Package pdftex.def Info: images/Output2.png  used on input line 75.
+(pdftex.def)             Requested size: 350.0pt x 287.8806pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 78.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 78.
-<images/Output2.png, id=31, 690.58pt x 706.64pt>
-File: images/Output2.png Graphic file (type png)
-<use images/Output2.png>
-Package pdftex.def Info: images/Output2.png  used on input line 80.
-(pdftex.def)             Requested size: 350.0pt x 358.13889pt.
+<images/Output1.png, id=28, 672.5125pt x 560.0925pt>
+File: images/Output1.png Graphic file (type png)
+<use images/Output1.png>
+Package pdftex.def Info: images/Output1.png  used on input line 80.
+(pdftex.def)             Requested size: 350.0pt x 291.48907pt.
 
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 74--84
 []$[]$ $[]$ 
  []
 
-[7 <./images/Output1.png> <./images/Output2.png>] (./CCode/udp/udpserver.c
-[8]) [9] (./CCode/udp/udpclient.c) [10]
-<images/Output3.png, id=48, 689.57625pt x 705.63625pt>
-File: images/Output3.png Graphic file (type png)
-<use images/Output3.png>
-Package pdftex.def Info: images/Output3.png  used on input line 96.
-(pdftex.def)             Requested size: 350.0pt x 358.14699pt.
-<images/Output4.png, id=49, 690.58pt x 707.64375pt>
-File: images/Output4.png Graphic file (type png)
-<use images/Output4.png>
-Package pdftex.def Info: images/Output4.png  used on input line 101.
-(pdftex.def)             Requested size: 350.0pt x 358.6476pt.
+[6 <./images/Output2.png> <./images/Output1.png>] (./CCode/udp/udpserver.c
+[7]) [8] (./CCode/udp/udpclient.c) [9]
+<images/Output01.png, id=45, 760.8425pt x 560.0925pt>
+File: images/Output01.png Graphic file (type png)
+<use images/Output01.png>
+Package pdftex.def Info: images/Output01.png  used on input line 96.
+(pdftex.def)             Requested size: 350.0pt x 257.65422pt.
+<images/Output02.png, id=46, 760.8425pt x 560.0925pt>
+File: images/Output02.png Graphic file (type png)
+<use images/Output02.png>
+Package pdftex.def Info: images/Output02.png  used on input line 101.
+(pdftex.def)             Requested size: 350.0pt x 257.65422pt.
 
 Overfull \hbox (2.22221pt too wide) in paragraph at lines 95--105
 []$[]$ $[]$ 
  []
 
-[11 <./images/Output3.png> <./images/Output4.png>]
-(./CCode/broadcast/udpBroadcastServer.c [12]) [13]
-(./CCode/broadcast/udpBroadcastClient1.c [14]) [15]
-(./CCode/broadcast/udpBroadcastClient2.c [16]) [17]
-File: images/Output3.png Graphic file (type png)
-<use images/Output3.png>
-Package pdftex.def Info: images/Output3.png  used on input line 125.
-(pdftex.def)             Requested size: 200.0pt x 204.6508pt.
-File: images/Output4.png Graphic file (type png)
-<use images/Output4.png>
-Package pdftex.def Info: images/Output4.png  used on input line 130.
-(pdftex.def)             Requested size: 200.0pt x 204.94148pt.
-File: images/Output4.png Graphic file (type png)
-<use images/Output4.png>
-Package pdftex.def Info: images/Output4.png  used on input line 135.
-(pdftex.def)             Requested size: 200.0pt x 204.94148pt.
- [18] (./Assignment2.aux)
+[10 <./images/Output01.png> <./images/Output02.png>]
+(./CCode/broadcast/udpBroadcastServer.c [11]) [12]
+(./CCode/broadcast/udpBroadcastClient1.c [13]) [14]
+(./CCode/broadcast/udpBroadcastClient2.c [15]) [16]
+<images/Output001.png, id=71, 739.76375pt x 538.01pt>
+File: images/Output001.png Graphic file (type png)
+<use images/Output001.png>
+Package pdftex.def Info: images/Output001.png  used on input line 125.
+(pdftex.def)             Requested size: 350.0pt x 254.54765pt.
+<images/Output003.png, id=72, 740.7675pt x 541.02126pt>
+File: images/Output003.png Graphic file (type png)
+<use images/Output003.png>
+Package pdftex.def Info: images/Output003.png  used on input line 130.
+(pdftex.def)             Requested size: 350.0pt x 255.62564pt.
 
-LaTeX Warning: There were multiply-defined labels.
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 124--134
+[]$[]$ $[]$ 
+ []
 
- ) 
+<images/Output002.png, id=73, 739.76375pt x 542.025pt>
+File: images/Output002.png Graphic file (type png)
+<use images/Output002.png>
+Package pdftex.def Info: images/Output002.png  used on input line 138.
+(pdftex.def)             Requested size: 500.0pt x 366.35559pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[17 <./images/Output001.png> <./images/Output003.png>] [18 <./images/Output002.
+png>] (./Assignment2.aux) ) 
 Here is how much of TeX's memory you used:
- 5328 strings out of 481239
- 77407 string characters out of 5920377
- 828428 words of memory out of 5000000
- 20561 multiletter control sequences out of 15000+600000
+ 5351 strings out of 481239
+ 77844 string characters out of 5920377
+ 706404 words of memory out of 5000000
+ 20584 multiletter control sequences out of 15000+600000
  537228 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,53p,243b,1852s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmtt8.pfb>
-Output written on Assignment2.pdf (18 pages, 1534613 bytes).
+ 41i,8n,53p,239b,1852s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on Assignment2.pdf (18 pages, 1729541 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
+ 107 PDF objects out of 1000 (max. 8388607)
  63 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

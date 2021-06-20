@@ -1,3 +1,5 @@
+//This is the Server side implementation of UDP Chat
+
 #include<sys/types.h>
 #include<sys/socket.h>
 #include<netinet/in.h>
