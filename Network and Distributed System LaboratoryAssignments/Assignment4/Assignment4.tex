@@ -1,6 +1,6 @@
 \documentclass{article}
 \usepackage{geometry}
-\geometry{a4paper, landscape, margin=1.5cm}
+\geometry{a4paper, portrait, margin=1.5cm}
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 \usepackage{listings}
@@ -18,7 +18,8 @@
     numberstyle=\tiny\color{codegray},
     stringstyle=\color{codepurple},
     basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,         
+    breakatwhitespace=false,  
+    frame=shadowbox,       
     breaklines=true,                 
     captionpos=b,                    
     keepspaces=true,                 
@@ -29,14 +30,14 @@
     showtabs=false,                  
     tabsize=2
 }
-
+    
 \lstset{style=mystyle}
 
 \author{\Large submitted by\\ Arghya Bandyopadhyay\\
     	RollNo. 20CS4103\\}
 \title{\begin{center}
        \bfseries\Large
-    	Assignment 3\\
+    	Assignment 4\\
     	Of\\
     	Network \& Distributed System Lab (CS2051)\\
         Masters of Technology in Computer Science And Engineering\\
@@ -44,83 +45,64 @@
     	submitted to\\
     	Dr Sujoy Saha\\
     	Assistant Professor\\
-    	\&\\
-    	Dr Suvrojit Das\\
-    	Associate Professor\\
     	Dept. of CSE\\
     	\vskip1cm
     	\includegraphics[width=4cm]{NITDGP}\\
     	National Institute of Technology, Durgapur\\
     \end{center}}
-\date{14 June 2021}
+\date{1 Jul 2021}
 \begin{document}
 \maketitle
 \pagebreak
 
-\textbf{Objective:} Implement naïve flow control mechanism using stop \& wait protocol. Transfer
-files (Text, Image, Audio, Video) using TCP and UDP protocol. If during the connection
-suddenly connection is terminated then you have start ones again, it simply resume the
-process not start from being.
+\textbf{Objective:} Sync is a communication protocol for peer-to-peer file sharing (P2P), enabling users to distribute data and electronic files over the Internet/offline in a decentralized manner. 
 
-\begin{center}
-\includegraphics[width=350pt]{Question1Diagram}
-\end{center}
+Design and Implement a sync protocol using “nanohttpd” which will transfer multimodal files (Text, Image, Audio, and Video), and if the connection is intermittent during the synching, the process can restart the services and resume the cycle/process.
 
-Write a socket program in Java for Multimodal File Transmission using TCP and UDP with
-\textbf{Full-Duplex Stop and Wait protocol}. The program/protocol should support the following
-properties/mechanism
-\begin{enumerate}
-	\item The protocol will send any type of files
-	\item Each packet should consist of the file name, sequence number/Acknowledgement
-number
-	\item A log file should be generated with some information like,
-\end{enumerate}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=350pt]{Question1Diagram1}
+\caption{Information exchange between heterogeneous nodes}
+\label{fig:Question1Diagram1}
+\end{figure}
 
-List of uncommon files in server and client which are to be transferred, Start time, If
-the connection is broken then the \% of the file already uploaded, How many times
-connections were established during the complete transmission, End time (when the
-file is fully transmitted), \textbf{How many packets are lost, How many time-outs are
-occurred, etc.}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=350pt]{Question1Diagram2}
+\caption{File synching (store and forwarding approach) between the nodes and file can move from
+one place another due to the movement of the nodes.}
+\label{fig:Question1Diagram2}
+\end{figure}
+
 \pagebreak
 \begin{flushleft}
 \textbf{Answer.}
+
+\textbf{$build.gradle$}
+\lstinputlisting[language=xml]{listedCodes/build.gradle}
+\textbf{$activity\_main.xml$}
+\lstinputlisting[language=xml]{listedCodes/activity_main.xml}
+\textbf{$AndroidManifest.xml$}
+\lstinputlisting[language=xml]{listedCodes/AndroidManifest.xml}
+\textbf{$GetFileExtension.java$}
+\lstinputlisting[language=java]{listedCodes/GetFileExtension.java}
+\textbf{$Download.java$}
+\lstinputlisting[language=java]{listedCodes/Download.java}
+\textbf{$Ip.java$}
+\lstinputlisting[language=java]{listedCodes/Ip.java}
+\textbf{$Main.java$}
+\lstinputlisting[language=java]{listedCodes/Main.java}
+\textbf{$MainActivity.java$}
+\lstinputlisting[language=java]{listedCodes/MainActivity.java}
 \end{flushleft}
 
-The following code is the implementation for Multimodal File Transmission using TCP and UDP with
-\textbf{Full-Duplex Stop and Wait protocol}.
-\begin{lstlisting}
+\textbf{Output:}
 
-	Java Code:
+\includegraphics[height=350pt]{Output1}
+\includegraphics[height=350pt]{Output2}
+\includegraphics[height=350pt]{Output3}
 
-\end{lstlisting}
-\lstinputlisting[language=Java]{JavaCode/ReceiverClass.java}
-\pagebreak
-\lstinputlisting[language=Java]{JavaCode/SenderClass.java}
-\pagebreak
-\lstinputlisting[language=Java]{JavaCode/FileComparator.java}
-\pagebreak
-\lstinputlisting[language=Java]{JavaCode/Server.java}
-\pagebreak
-\lstinputlisting[language=Java]{JavaCode/Client.java}
-\pagebreak
-
-Output:
-
-
-\includegraphics[width=365pt]{Output1}
-\includegraphics[width=365pt]{Output2}
-
-\includegraphics[width=365pt]{Output3}
-\includegraphics[width=365pt]{Output4}
-\pagebreak
-
-Log File
-
-\begin{enumerate}
-	\item Log File for the files in client files.
-	\lstinputlisting{JavaCode/log_mojave_dynamic_1.jpeg.txt}
-	\item Log File for the files in server files.
-	\lstinputlisting{JavaCode/log_Question1Diagram.png.txt}
-\end{enumerate}
-
+\includegraphics[height=350pt]{Output4}
+\includegraphics[height=350pt]{Output5}
+\includegraphics[height=350pt]{Output6}
 \end{document}
